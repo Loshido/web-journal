@@ -5,7 +5,7 @@
 - Framework Javascript -> [React](https://react.dev)
 - (avec [React router](https://reactrouter.com/home))
 
-Framework Frontend (CSS) -> [Tailwindcss](https://tailwindcss.com)
+- Framework Frontend (CSS) -> [Tailwindcss](https://tailwindcss.com)
 
 *`~/` corresponds à `./src/` depuis n'importe où à l'intérieur de `src`.
 
