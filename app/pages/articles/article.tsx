@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router"
 import Lien from "~/components/Lien"
 
 export default () => {
