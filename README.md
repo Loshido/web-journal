@@ -7,16 +7,15 @@
 
 - Framework Frontend (CSS) -> [Tailwindcss](https://tailwindcss.com)
 
-*`~/` corresponds à `./src/` depuis n'importe où à l'intérieur de `src`.
+*`~/` corresponds à `./app/` depuis n'importe où à l'intérieur de `app`.
 
 ## Structure
 
-- `src/components` corresponds aux composants réutilisables dans toute l'application
-- `src/pages` corresponds aux différents chemins d'accès définis dans `src/main.tsx`
+- `app/components` corresponds aux composants réutilisables dans toute l'application
+- `app/pages` corresponds aux différents chemins d'accès définis dans `app/routes.ts`
 
 ## Commandes
 
-- `bun install` permet d'installer les dépendances
-- `bun dev` permet de lancer un serveur de développement (hot reload)
-- `bun run build` permet de compiler l'application dans `./dist` pour qu'elle soit distribué de façon statique.
-- `bun run preview` sert les fichiers statiques contenus dans `./dist`
+- `bun install` permet d'installer les dépendances *(ou `npm install`)*
+- `bun dev` permet de lancer un serveur de développement *(ou `npm run dev`)*
+- `bun run build` permet de compiler l'application. *(ou `npm run build`)*
