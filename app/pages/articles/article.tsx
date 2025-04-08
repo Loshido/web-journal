@@ -4,9 +4,12 @@ import Lien from "~/components/Lien"
 export default () => {
     const params = useParams()
 
-    return <div>    
+    return <div className="p-5">    
         <p>
             /articles/{params.article}
+        </p>
+        <p>
+            On affiche l'article { params.article }
         </p>
 
         <Lien to="/articles">

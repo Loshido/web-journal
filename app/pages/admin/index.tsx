@@ -1,8 +1,12 @@
 import Lien from "~/components/Lien";
 
-export default () => <div>
+export default () => <div className="p-5"   >
     <p>
         /admin
+    </p>
+    <p>
+        On a le choix entre modifier, supprimer ou créer un article
+        (Les articles existants seront listés)
     </p>
 
     <Lien to="/login">

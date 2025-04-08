@@ -6,6 +6,7 @@ import {
     prefix,
   } from "@react-router/dev/routes";
 
+// https://reactrouter.com/start/framework/routing
 export default [
     index('./pages/index.tsx'),
     ...prefix('/articles', [
