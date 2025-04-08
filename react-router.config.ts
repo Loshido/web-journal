@@ -1,3 +1,6 @@
+// Ce fichier permet de configurer react-router pour avoir du SSR 
+// et ainsi avec un véritable backend
+
 import type { Config } from "@react-router/dev/config";
 
 declare module "react-router" {
