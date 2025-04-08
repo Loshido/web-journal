@@ -1,8 +1,8 @@
 import Lien from "~/components/Lien";
 
-export default () => <div>
+export default () => <div className="p-5">
     <p>
-        Hello, World!
+        La page d'accueil montre les articles les plus populaires.
     </p>
 
     <Lien to="/articles">

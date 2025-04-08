@@ -1,8 +1,11 @@
 import Lien from "~/components/Lien";
 
-export default () => <div>
+export default () => <div className="p-5">
     <p>
         /login
+    </p>
+    <p>
+        Page de connexion à la partie d'édition
     </p>
     
     <Lien to="/admin">
