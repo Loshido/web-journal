@@ -51,7 +51,6 @@ export function generateToken(): string {
 export function authentificateToken(token: string): boolean {
     console.log('authentificating ', token)
     for(const session of sessions.read()) {
-        console.log(session)
         if(session.token === token && session.createdAt + TOKEN_EXPIRATION >= Date.now()) {
             return true;
         }
