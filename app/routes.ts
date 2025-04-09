@@ -13,7 +13,7 @@ export default [
         index('./pages/articles/index.tsx'),
         route('/:article', './pages/articles/article.tsx')
     ]),
-    layout('./components/Auth.tsx', 
+    layout('./components/admin/Auth.tsx', 
         prefix('/admin', [
             index('./pages/admin/index.tsx'),
             route('/:article', './pages/admin/article.tsx')
