@@ -14,6 +14,10 @@
 - `app/components` corresponds aux composants réutilisables dans toute l'application
 - `app/pages` corresponds aux différents chemins d'accès définis dans `app/routes.ts`
 
+## Routes
+
+![routes](/public/routes.png)
+
 ## Commandes
 
 - `bun install` permet d'installer les dépendances *(ou `npm install`)*
