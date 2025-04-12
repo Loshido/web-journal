@@ -8,26 +8,27 @@ import auth from "~/lib/auth"
 // Middleware: Une fonction sur le serveur qui effectue 
 // généralement une vérification d'identité à chaque requête.
 
+export const traitementsCookies = (request: Request): { [cookie: string]: string } => {
+    // Cookie: <name>=<value>; <name>=<value>; ...
+    // 'a;b;c;d'.split('c') == ['a', 'b', 'c', 'd']
+    const cookies = request.headers.get('Cookie')?.split(';');
+    if(!cookies) return {};
+
+    return cookies.reduce((previous, cookie) => {
+        const [cle, valeur] = cookie.split('=');
+        if(valeur.length > 0 && cle.length > 0) {
+            previous[cle] = valeur
+        };
+        return previous
+    }, {} as { [cookie: string]: string })
+}
+
 const protection: unstable_MiddlewareFunction = ({ request }, next) => {
     // on cherche à récuper le cookie 'token' 
     // pour vérifier si l'utilisateur est connecté.
 
-
-    // Cookie: <name>=<value>; <name>=<value>; ...
-    // 'a;b;c;d'.split('c') == ['a', 'b', 'c', 'd']
-    const cookies = request.headers.get('Cookie')?.split(';');
-    if(!cookies) throw redirect('/login', {
-        status: 302
-    })
-
-    // On cherche si l'un des cookies est bien le cookie 'token' et qu'il soit valide.
-    const logged = cookies.some(cookie => {
-        const [cle, valeur] = cookie.split('=');
-        if(cle !== 'token') return false;
-        if(auth.authentificate(valeur)) return true
-    })
-
-    if(logged) {
+    const cookies = traitementsCookies(request);
+    if('token' in cookies && auth.authentificate(cookies.token)) {
         // On passe au middleware suivant,
         // sploiler: c'était le dernier
         return next()

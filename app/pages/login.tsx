@@ -1,9 +1,11 @@
-import Formulaire from "~/components/admin/Formulaire";
+import Formulaire from "~/components/admin/login";
 import Lien from "~/components/Lien";
 import { Route } from "../+types/root";
 import { check } from "~/lib/users";
 import { redirect } from "react-router";
 import { generateToken, TOKEN_EXPIRATION } from "~/lib/sessions";
+import { traitementsCookies } from "~/components/admin/Auth";
+import auth from "~/lib/auth";
 
 // Lorsque le formulaire est envoyé, le serveur execute cette fonction.
 // https://reactrouter.com/start/framework/actions
@@ -36,6 +38,13 @@ export async function action({
             'Set-Cookie': `token=${token}; Expires=${expiration}`
         }
     })
+}
+
+export async function loader({ request }: Route.LoaderArgs): Promise<void> {
+    const cookies = traitementsCookies(request);
+    if('token' in cookies && auth.authentificate(cookies.token)) {
+        throw redirect('/admin')
+    }
 }
 
 export default ({  }: Route.ComponentProps) => {

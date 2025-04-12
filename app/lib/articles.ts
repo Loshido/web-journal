@@ -27,7 +27,7 @@ export const createArticle = (article: ArticleData): void => {
     const articles = listArticles();
     articles.push(article);
 
-    writeFileSync(ARTICLES_PATH, JSON.stringify(articles));
+    writeFileSync(ARTICLES_PATH, JSON.stringify(articles, undefined, 4));
 }
 
 export const updateArticle = (id: string, article: Partial<ArticleData>) => {
@@ -36,6 +36,7 @@ export const updateArticle = (id: string, article: Partial<ArticleData>) => {
     for(let i = 0; i < articles.length; i++) {
         if(articles[i].id === id) {
             Object.entries(article).forEach(([key, value]) => {
+                if(value === undefined) return;
                 // @ts-ignore
                 articles[i][key] = value
             })
@@ -43,7 +44,7 @@ export const updateArticle = (id: string, article: Partial<ArticleData>) => {
         }
     }
     
-    writeFileSync(ARTICLES_PATH, JSON.stringify(articles));
+    writeFileSync(ARTICLES_PATH, JSON.stringify(articles, undefined, 4));
 }
 
 export const deleteArticle = (id: string) => {
@@ -54,5 +55,5 @@ export const deleteArticle = (id: string) => {
     
     articles.splice(i, 1);
     
-    writeFileSync(ARTICLES_PATH, JSON.stringify(articles));
+    writeFileSync(ARTICLES_PATH, JSON.stringify(articles, undefined, 4));
 }
