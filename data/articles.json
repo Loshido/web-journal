@@ -1,12 +1,1 @@
-[
-    {
-		"titre" : "Il était une fois",
-		"description" : "Blablablabla",
-		"contenu" : "Blabla\nblabla<strong>\nblabla</strong>",
-		"reaction" : {
-			"likes" : 0,
-			"dislikes" : 0
-		},
-		"date" : 0
-	}
-]
+[{"id":"article-1","titre":"Article 1","description":"description de l'article","contenu":"","reaction":{"likes":0,"dislikes":0},"date":1744455312862}]

@@ -36,12 +36,12 @@ export async function action({
             'Set-Cookie': `token=${token}; Expires=${expiration}`
         }
     })
-  }
+}
 
 export default ({  }: Route.ComponentProps) => {
 
     return <section className="w-screen h-screen grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5
-        bg-gradient-to-br from-white to-rose-700/50">
+        bg-gradient-to-br from-white to-blue-700/10">
         <div className="md:col-span-2 hidden sm:block"/>
         <div className="md:col-span-3 bg-black/5 backdrop-blur-xl p-4 flex flex-col gap-4 justify-center relative">
             <Lien className=" absolute top-4 left-4
