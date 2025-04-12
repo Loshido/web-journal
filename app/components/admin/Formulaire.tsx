@@ -11,7 +11,7 @@ export default () => <Form method="POST" className="flex flex-col gap-6">
         type="password" placeholder="Mots de passe" name="pass"
         autoComplete="off" />
     <button type="submit" className="outline-none mx-2 px-4 py-2 w-fit text-sm font-medium
-        bg-rose-700/50 text-white hover:bg-rose-700/65 transition-colors cursor-pointer">
+        bg-blue-700/50 text-white hover:bg-blue-700/65 transition-colors cursor-pointer">
         Connexion
     </button>
 </Form>
