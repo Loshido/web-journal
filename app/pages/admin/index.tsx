@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Lien from "~/components/Lien";
 import { createArticle, deleteArticle, listArticles, type ArticleData } from "~/lib/articles";
-import Article from "~/components/article";
-import CreationArticle from "~/components/article/create";
-import Suppression from "~/components/article/suppression";
+import Article from "~/components/admin/article";
+import CreationArticle from "~/components/admin/article/create";
+import Suppression from "~/components/admin/article/delete";
 import { Route } from "./+types";
 import { useSubmit } from "react-router";
 import { traitementRequete } from "./action";
@@ -16,7 +16,7 @@ export async function action({ request }: Route.ActionArgs) {
             id: donnees.id,
             titre: donnees.titre,
             description: donnees.description,
-            contenu: '',
+            contenu: '<p>Hello, World!</p>',
             reaction: {
                 likes: 0,
                 dislikes: 0
