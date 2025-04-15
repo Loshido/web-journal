@@ -1,1 +1,57 @@
-[{"id":"article-1","titre":"Article 1","description":"description de l'article","contenu":"","reaction":{"likes":0,"dislikes":0},"date":1744455312862},{"id":"article-2","titre":"Article 5","description":"description de l'article3","contenu":"<p>Hello, World3</p>","reaction":{"likes":0,"dislikes":0},"date":1744459784620},{"id":"aaaaaa","titre":"La femme est enceinte","description":"aaaa","contenu":"<p>Hello, World!</p>","reaction":{"likes":0,"dislikes":0},"date":1744462945412}]
+[
+    {
+        "id": "article-1",
+        "titre": "Article 1",
+        "description": "description de l'article",
+        "contenu": "",
+        "reaction": {
+            "likes": 0,
+            "dislikes": 0
+        },
+        "date": 1744455312862
+    },
+    {
+        "id": "article-2",
+        "titre": "Article 5",
+        "description": "description de l'article3",
+        "contenu": "<p>Hello, World3</p>",
+        "reaction": {
+            "likes": 0,
+            "dislikes": 0
+        },
+        "date": 1744459784620
+    },
+    {
+        "id": "vie-belle",
+        "titre": "La vie est belle",
+        "description": "JE pense que la vie est belle, n'en êtes vous pas convaincu ? ",
+        "contenu": "Voici l'article en HTML :\n\n```html\n<style>\n  body {\n    font-family: Arial, sans-serif;\n    background-color: #f2f2f2;\n  }\n  \n  h1 {\n    color: #007bff;\n  }\n</style>\n\n<article>\n  <h1>La vie est belle</h1>\n  <p>JE pense que la vie est belle, n'en êtes vous pas convaincu ?</p>\n</article>\n```\n\nNote : J'ai mis un style simple pour rendre l'article plus lisible, mais cela peut varier en fonction de vos besoins !",
+        "reaction": {
+            "likes": 0,
+            "dislikes": 0
+        },
+        "date": 1744736303280
+    },
+    {
+        "id": "vie-belle",
+        "titre": "La vie est belle",
+        "description": "JE pense que la vie est belle, n'en êtes vous pas convaincu ? ",
+        "contenu": "```html\n<style>\n  body {\n    font-family: Arial, sans-serif;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    padding: 20px;\n  }\n  \n  h1 {\n    color: #00698f;\n    font-size: 40px;\n  }\n  \n  p {\n    font-size: 18px;\n  }\n</style>\n\n<article>\n  <h1>La vie est belle</h1>\n  <p>JE pense que la vie est belle, n'en êtes vous pas convaincu ?</p>\n  <p>La vie est remplie de moments magnifiques, de découvertes sur nous-mêmes et du monde qui nous entoure. Elle est un cadeau précieux qui nous permet de vivre, de nous amuser, de nous aimer, de nous soutenir les uns les autres et de créer des souvenirs inoubliables.</p>\n  <p>Chaque jour est une nouvelle occasion de recommencer, de nous réinventer, de nous dépasser et de nous sentir vivants. La vie est remplie de défis, de difficultés et de moments difficiles, mais elle est",
+        "reaction": {
+            "likes": 0,
+            "dislikes": 0
+        },
+        "date": 1744736303261
+    },
+    {
+        "id": "cloudflare-ia",
+        "titre": "Cloudflare IA",
+        "description": "L'ia est-elle révolutionnaire ? On se pose la question...",
+        "contenu": "<article>\n    <h1>Cloudflare IA</h1>\n    <p>L'ia est-elle révolutionnaire ? On se pose la question...</p>\n</article>\n\n<style>\n    article {\n        font-family: Arial, sans-serif;\n        color: #333;\n        margin: 20px;\n        padding: 20px;\n        border: 1px solid #ddd;\n        border-radius: 5px;\n        background-color: #f9f9f9;\n    }\n\n    article h1 {\n        font-size: 24px;\n        color: #007BFF;\n    }\n\n    article p {\n        font-size: 16px;\n        line-height: 1.5;\n    }\n</style>\n```\nThis code will create an article with the title 'Cloudflare IA' and the description 'L'ia est-elle révolutionnaire ? On se pose la question...'. The style of the article is changed",
+        "reaction": {
+            "likes": 0,
+            "dislikes": 0
+        },
+        "date": 1744736635168
+    }
+]

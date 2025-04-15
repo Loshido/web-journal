@@ -10,7 +10,6 @@ export async function action({ request, params }: Route.ActionArgs) {
     const donnees = await traitementRequete(request)
 
     const previousId = params.article
-    console.log(donnees, previousId)
     if(donnees.type !== "update") {
         return false;
     }

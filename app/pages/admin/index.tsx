@@ -7,6 +7,7 @@ import Suppression from "~/components/admin/article/delete";
 import { Route } from "./+types";
 import { useSubmit } from "react-router";
 import { traitementRequete } from "./action";
+import { generate } from "~/lib/ia";
 
 export async function action({ request }: Route.ActionArgs) {
     const donnees = await traitementRequete(request)
@@ -23,7 +24,9 @@ export async function action({ request }: Route.ActionArgs) {
             },
             date: Date.now()
         }
+        const contenu = await generate(`Le titre de l'article est '${donnees.titre}' et sa description est '${donnees.description}'`);
     
+        article.contenu = contenu
         createArticle(article);
     } else if(donnees.type === 'delete') {
         deleteArticle(donnees.id);
