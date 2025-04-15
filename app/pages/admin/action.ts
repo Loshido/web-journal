@@ -2,8 +2,7 @@ type CreateRequest = {
     type: 'create',
     id: string,
     titre: string,
-    description: string,
-    ia?: boolean
+    description: string
 }
 type UpdateRequest = {
     type: 'update',
@@ -48,7 +47,6 @@ export const traitementRequete = async (request: Request): Promise<Requests> => 
         type: 'create',
         id,
         titre,
-        description,
-        ia: formData.has('ia')
+        description
     }
 }
