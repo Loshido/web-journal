@@ -13,6 +13,7 @@
 
 - `app/components` corresponds aux composants réutilisables dans toute l'application
 - `app/pages` corresponds aux différents chemins d'accès définis dans `app/routes.ts`
+- `app/lib` corresponds aux modules côté serveur.
 
 ## Routes
 
@@ -23,3 +24,7 @@
 - `bun install` permet d'installer les dépendances *(ou `npm install`)*
 - `bun dev` permet de lancer un serveur de développement *(ou `npm run dev`)*
 - `bun run build` permet de compiler l'application. *(ou `npm run build`)*
+
+### Connexion
+- Identifiant : `guest`
+- Mots de pase : `guest`
