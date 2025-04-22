@@ -1,5 +1,5 @@
 import { Outlet, redirect, unstable_MiddlewareFunction } from "react-router"
-import auth from "~/lib/auth"
+import { authentificate } from "~/lib/auth"
 
 // Ressources
 // - Liste et format des headers / en-têtes: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers
@@ -28,7 +28,7 @@ const protection: unstable_MiddlewareFunction = ({ request }, next) => {
     // pour vérifier si l'utilisateur est connecté.
 
     const cookies = traitementsCookies(request);
-    if('token' in cookies && auth.authentificate(cookies.token)) {
+    if('token' in cookies && authentificate(cookies.token)) {
         // On passe au middleware suivant,
         // sploiler: c'était le dernier
         return next()

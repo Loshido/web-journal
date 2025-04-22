@@ -1,11 +1,9 @@
 import Formulaire from "~/components/admin/login";
 import Lien from "~/components/Lien";
-import { Route } from "../+types/root";
-import { check } from "~/lib/users";
+import { Route } from "./+types/login";
 import { redirect } from "react-router";
-import { generateToken, TOKEN_EXPIRATION } from "~/lib/sessions";
 import { traitementsCookies } from "~/components/admin/Auth";
-import auth from "~/lib/auth";
+import { login, authentificate, TOKEN_EXPIRATION } from "~/lib/auth";
 
 // Lorsque le formulaire est envoyé, le serveur execute cette fonction.
 // https://reactrouter.com/start/framework/actions
@@ -24,11 +22,9 @@ export async function action({
     if(!pass || !id) throw redirect('/admin');
 
     // On vérifie avec la "base de données"
-    if(!check(id.toString(), pass.toString())) throw redirect('/admin');
+    const token = login(id.toString(), pass.toString());
+    if(token.length === 0) throw redirect('/admin');
 
-    // à ce stade, on suppose que l'utilisateur s'est bien identifié
-    // on lui génère un jeton d'authentification.
-    const token = generateToken()
     const expiration = new Date(Date.now() + TOKEN_EXPIRATION).toUTCString()
 
     // On l'emmène à la page d'administration
@@ -42,7 +38,7 @@ export async function action({
 
 export async function loader({ request }: Route.LoaderArgs): Promise<void> {
     const cookies = traitementsCookies(request);
-    if('token' in cookies && auth.authentificate(cookies.token)) {
+    if('token' in cookies && authentificate(cookies.token)) {
         throw redirect('/admin')
     }
 }
