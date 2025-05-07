@@ -4,7 +4,7 @@ import { Route } from "./+types/article";
 import { redirect, useSubmit } from "react-router";
 import Meta from "~/components/admin/article/meta";
 import { useEffect, useState } from "react";
-import { traitementRequete } from "./action";
+import { traitementRequete } from "../action";
 
 export async function action({ request, params }: Route.ActionArgs) {
     const donnees = await traitementRequete(request)
@@ -48,7 +48,7 @@ export default ({ loaderData }: Route.ComponentProps) => {
 
     return <div className="h-screen w-screen flex flex-col">
         <div className="w-screen py-2 sm:py-4 relative border-b border-black/25">
-            <Lien to="/admin" className="sm:absolute top-0 left-0 p-2 sm:p-4 hover:text-blue-400 transition-colors">
+            <Lien to="/admin/articles" className="sm:absolute top-0 left-0 p-2 sm:p-4 text-blue-600 hover:text-blue-400 transition-colors">
                 Revenir aux articles
             </Lien>
             <p className="text-lg font-semibold text-center">
