@@ -1,5 +1,6 @@
 import Header from "~/components/header"
 import Footer from "~/components/footer"
+
 import { type ArticleData, listArticles } from "~/lib/articles";
 import { Route } from "./+types";
 
