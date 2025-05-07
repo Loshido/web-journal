@@ -5,7 +5,7 @@ import Footer from "~/components/footer"
 export default () => <div>
     <Header/>
     <div className="flex flex-col items-center justify-center w-screen mb-10 mt-5">
-        <p className="text-xl m-5">Article les plus lickéss</p>
+        <p className="text-xl m-5">Article les plus lickés</p>
         <div className="w-full h-100 p-5 flex items-center justify-center">
             <div className="w-6xl h-full grid grid-cols-1 grid-rows-4 rounded-2xl">
                 <div className="row-span-3 bg-amber-300 rounded-t-2xl"></div>
