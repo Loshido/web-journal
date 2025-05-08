@@ -5,10 +5,12 @@ import { Route } from "./+types";
 
 export async function loader(): Promise<ArticleData[]> {
     const articles = listArticles()
-    return articles;
+    articles.sort((a, b) => b.reaction.likes - a.reaction.likes); //C'est ici que l'on trie la listArticles par le nombres de likes pour ensuite pouvoir les afficher
+    return articles.slice(0, 3);
 }
 
 export default function Page({ loaderData: articles }: Route.ComponentProps) {
+
     return <div>
     <Header/>
     <div className="flex flex-col items-center justify-center w-screen mb-10 mt-5">
