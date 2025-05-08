@@ -39,7 +39,7 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
                     <div className="bg-red-200 col-span-2 rounded-2xl grid grid-rows-4">
                         <div className="row-span-3"></div>
                         <div className="bg-gray-300 rounded-b-2xl text-xl p-4 grid grid-cols-5">
-                            <div className="col-span-3 flex items-center">Titre 3</div>
+                            <div className="col-span-3 flex items-center">{articles[2].titre}</div>
                         </div>
                     </div>
                     <div className="bg-red-200 col-span-1 rounded-2xl grid grid-rows-4">
