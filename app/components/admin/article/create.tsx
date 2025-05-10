@@ -20,7 +20,7 @@ export default () => {
     return <article onClick={() => {
         if(!ouvert) setOuvert(true);
     }}
-        className="p-3 w-full h-full text-xl font-semibold transition-colors cursor-pointer
+        className="p-3 w-full h-full max-h-48 text-xl font-semibold transition-colors cursor-pointer
         flex flex-col justify-center items-center bg-black/5 hover:bg-black/15">
         Créer un article 📰
 
