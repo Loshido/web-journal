@@ -8,12 +8,12 @@ import { traitementRequete } from "../action";
 
 export async function action({ request, params }: Route.ActionArgs) {
     const donnees = await traitementRequete(request)
-
+    
     const previousId = params.article
     if(donnees.type !== "update") {
         return false;
     }
-
+    
     console.log('updating article', previousId)
     updateArticle(previousId, {
         id: donnees.id,
@@ -28,13 +28,14 @@ export async function action({ request, params }: Route.ActionArgs) {
 
 export async function loader({ params }: Route.LoaderArgs): Promise<ArticleData> {
     const article = listArticles().find(article => article.id == params.article)
-
+    
     if(!article) {
         throw redirect('/admin');
     }
     return article;
 }
 
+import "~/components/articles/article.css"
 export default ({ loaderData }: Route.ComponentProps) => {
     const submit = useSubmit()
     const [article, setArticle] = useState<ArticleData>()
@@ -123,7 +124,7 @@ export default ({ loaderData }: Route.ComponentProps) => {
                     </div>
                 </div>
             </div>
-            <div className="col-span-2 border p-4 border-blue-500
+            <div className="article col-span-2 border p-4 border-blue-500
                 md:border-0 md:border-l md:border-black/25" 
                 dangerouslySetInnerHTML={{__html: article.contenu}}/>
         </section>

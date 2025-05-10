@@ -25,7 +25,7 @@
         "id": "jsp",
         "titre": "Bonjour",
         "description": "ceci est juste un test pour le truc",
-        "contenu": "<p>Hello, World!</p>",
+        "contenu": "<strong>houuraraa</strong>\n<i>ahhhhh</i>\n<hr/>",
         "reaction": {
             "likes": 12,
             "dislikes": 0
