@@ -10,8 +10,7 @@ export default () => {
       <Header />
 
       <div className="flex flex-col items-center w-screen mb-10 mt-5">
-        <h1>/articles</h1>
-        <h1 className="font-bold">
+        <h1 className="font-bold text-3xl ">
           Retrouvez tous les articles sur cette même page 📄
         </h1>
 
