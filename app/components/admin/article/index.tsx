@@ -7,7 +7,7 @@ type Props = {
 }
     
 export default ({ article, supprimer }: Props) => <article 
-    className="p-3 w-full h-full bg-black/5
+    className="p-3 w-full h-full max-h-48 bg-black/5
     flex flex-col justify-between">
     <div>
         <h3 className="font-semibold text-lg">
