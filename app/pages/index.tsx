@@ -3,9 +3,6 @@ import Footer from "~/components/footer"
 import { type ArticleData, listArticles } from "~/lib/articles";
 import { Route } from "./+types";
 
-import { type ArticleData, listArticles } from "~/lib/articles";
-import { Route } from "./+types";
-
 export async function loader(): Promise<ArticleData[]> {
     const articles = listArticles()
     articles.sort((a, b) => b.reaction.likes - a.reaction.likes); //C'est ici que l'on trie la listArticles par le nombres de likes pour ensuite pouvoir les afficher
