@@ -1,0 +1,39 @@
+.article h1{
+    font-size: 2.5em;
+    line-height: 150%;
+    margin: 16px 0;
+    font-weight: 700;
+}
+.article h2{
+    font-size: 2.5em;
+    line-height: 125%;
+    font-weight: 600;
+    margin: 14px 0;
+}
+.article h3{
+    font-size: 2em;
+    line-height: 115%;
+    font-weight: 500;
+    margin: 12px 0;
+}
+.article h3{
+    font-size: 1.5em;
+    line-height: 105%;
+    margin: 8px 0;
+}
+.article p{
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 4px 0;
+}
+.article strong{
+    font-weight: 800;
+}
+.article i{
+    font-style: italic;
+}
+
+.article hr{
+    margin: 24px auto;
+    width: 75%;
+}
