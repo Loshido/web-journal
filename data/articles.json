@@ -22,14 +22,36 @@
         "date": 1744459784620
     },
     {
-        "id": "jsp",
-        "titre": "Bonjour",
-        "description": "ceci est juste un test pour le truc",
-        "contenu": "<strong>houuraraa</strong>\n<i>ahhhhh</i>\n<hr/>",
+        "id": "blllll",
+        "titre": "blablabla Livioovivo",
+        "description": "tjs blablater blblbl",
+        "contenu": "<h1>Épargner quand on est jeune : mission possible !</h1><p>Épargner dès le début de sa vie active permet de construire sereinement son avenir. Même 10€ par mois font une différence à long terme.</p><p>Commencez par définir un objectif : voyage, permis, projet pro… Ensuite, automatisez vos virements vers un livret ou une solution adaptée aux jeunes. Plus tôt vous commencez, plus les intérêts composés travaillent pour vous !</p>",
         "reaction": {
-            "likes": 12,
+            "likes": 0,
             "dislikes": 0
         },
-        "date": 1746736421409
+        "date": 1722259784620
+    },
+    {
+        "id": "fanta-article",
+        "titre": "salut à tous c'est fanta",
+        "description": "Minecraft Salut à tous c'est Fanta Salut à tous c'est Fanta",
+        "contenu": "<h1>Épargner quand on est jeune : mission possible !</h1><p>Épargner dès le début de sa vie active permet de construire sereinement son avenir. Même 10€ par mois font une différence à long terme.</p><p>Commencez par définir un objectif : voyage, permis, projet pro… Ensuite, automatisez vos virements vers un livret ou une solution adaptée aux jeunes. Plus tôt vous commencez, plus les intérêts composés travaillent pour vous !</p>",
+        "reaction": {
+            "likes": 0,
+            "dislikes": 0
+        },
+        "date": 1722259784620
+    },
+    {
+        "id": "fanta2",
+        "titre": "salut à tous c'est fanta et ça risque d'être long sa grande tante !",
+        "description": "Minecraft Salut à tous c'est Fanta Salut à tous c'est Fanta",
+        "contenu": "<h1>Épargner quand on est jeune : mission possible !</h1><p>Épargner dès le début de sa vie active permet de construire sereinement son avenir. Même 10€ par mois font une différence à long terme.</p><p>Commencez par définir un objectif : voyage, permis, projet pro… Ensuite, automatisez vos virements vers un livret ou une solution adaptée aux jeunes. Plus tôt vous commencez, plus les intérêts composés travaillent pour vous !</p>",
+        "reaction": {
+            "likes": 0,
+            "dislikes": 0
+        },
+        "date": 1722259784620
     }
 ]
