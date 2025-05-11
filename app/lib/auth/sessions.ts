@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from "fs"
+import fs from "fs"
 
 interface Session {
     token: string,
@@ -12,7 +12,7 @@ const SESSION_PATH = './data/sessions.json';
 const sessions = {
     // renvoie les sessions
     read(): Session[] {
-        const buffer = readFileSync(SESSION_PATH,  { encoding: 'utf-8' });
+        const buffer = fs.readFileSync(SESSION_PATH,  { encoding: 'utf-8' });
         const sessions = JSON.parse(buffer);
         if(typeof sessions === 'object' && sessions instanceof Array) {
             return sessions as Session[];
@@ -30,7 +30,10 @@ const sessions = {
         }
         sessions.push(session);
         
-        writeFileSync(SESSION_PATH, JSON.stringify(sessions));
+        this.write(sessions)
+    },
+    write(sessions: Session[]) {
+        fs.writeFileSync(SESSION_PATH, JSON.stringify(sessions))
     }
 }
 
@@ -56,4 +59,15 @@ export function authentificateToken(token: string): boolean {
         }
     }
     return false;
+}
+
+export function lister_sessions(): Session[] {
+    return sessions.read()
+}
+export function supprimer_session(token: string) {
+    const tokens = sessions.read();
+    const i = tokens.findIndex(session => session.token === token);
+    if(i < 0) return
+    tokens.splice(i, 1)
+    sessions.write(tokens)
 }

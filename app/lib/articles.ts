@@ -10,6 +10,7 @@ export interface ArticleData {
         likes: number,
         dislikes: number,
     },
+    image?: string,
     date: number
 }
 
