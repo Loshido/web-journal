@@ -1,3 +1,4 @@
+
 export default function Footer() {
     return <footer className="w-svw h-50 bg-gray-100 grid grid-cols-3">
         <div className="p-5 grid grid-rows-5 gap-1">
