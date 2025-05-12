@@ -4,16 +4,16 @@ import { Route } from "./+types/article";
 import { redirect, useSubmit } from "react-router";
 import Meta from "~/components/admin/article/meta";
 import { useEffect, useState } from "react";
-import { traitementRequete } from "./action";
+import { traitementRequete } from "../action";
 
 export async function action({ request, params }: Route.ActionArgs) {
     const donnees = await traitementRequete(request)
-
+    
     const previousId = params.article
     if(donnees.type !== "update") {
         return false;
     }
-
+    
     console.log('updating article', previousId)
     updateArticle(previousId, {
         id: donnees.id,
@@ -28,13 +28,14 @@ export async function action({ request, params }: Route.ActionArgs) {
 
 export async function loader({ params }: Route.LoaderArgs): Promise<ArticleData> {
     const article = listArticles().find(article => article.id == params.article)
-
+    
     if(!article) {
         throw redirect('/admin');
     }
     return article;
 }
 
+import "~/components/articles/article.css"
 export default ({ loaderData }: Route.ComponentProps) => {
     const submit = useSubmit()
     const [article, setArticle] = useState<ArticleData>()
@@ -48,7 +49,7 @@ export default ({ loaderData }: Route.ComponentProps) => {
 
     return <div className="h-screen w-screen flex flex-col">
         <div className="w-screen py-2 sm:py-4 relative border-b border-black/25">
-            <Lien to="/admin" className="sm:absolute top-0 left-0 p-2 sm:p-4 hover:text-blue-400 transition-colors">
+            <Lien to="/admin/articles" className="sm:absolute top-0 left-0 p-2 sm:p-4 text-blue-600 hover:text-blue-400 transition-colors">
                 Revenir aux articles
             </Lien>
             <p className="text-lg font-semibold text-center">
@@ -123,7 +124,7 @@ export default ({ loaderData }: Route.ComponentProps) => {
                     </div>
                 </div>
             </div>
-            <div className="col-span-2 border p-4 border-blue-500
+            <div className="article col-span-2 border p-4 border-blue-500
                 md:border-0 md:border-l md:border-black/25" 
                 dangerouslySetInnerHTML={{__html: article.contenu}}/>
         </section>

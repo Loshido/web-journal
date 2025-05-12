@@ -7,7 +7,7 @@ type Props = {
 }
     
 export default ({ article, supprimer }: Props) => <article 
-    className="p-3 w-full h-full bg-black/5
+    className="p-3 w-full h-full max-h-48 bg-black/5
     flex flex-col justify-between">
     <div>
         <h3 className="font-semibold text-lg">
@@ -18,7 +18,7 @@ export default ({ article, supprimer }: Props) => <article
         </p>
     </div>
     <div className="flex flex-row flex-wrap gap-2 select-none">
-        <Lien to={'/admin/' + article.id} className="px-2 py-1 text-sm cursor-pointer
+        <Lien to={'/admin/articles/' + article.id} className="px-2 py-1 text-sm cursor-pointer
             bg-blue-600 hover:bg-blue-500 transition-colors text-white">
             Modifier
         </Lien>
