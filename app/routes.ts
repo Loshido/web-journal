@@ -14,12 +14,14 @@ export default [
         route('/:article', './pages/articles/article.tsx')
     ]),
     ...prefix('/admin', [
-        layout('./pages/admin/layout.tsx', [
-            index('./pages/admin/index.tsx'),
-            route('/articles', './pages/admin/articles/index.tsx'),
-            route('/images', './pages/admin/images/index.tsx'),
-            route('/utilisateurs', './pages/admin/utilisateurs/index.tsx'),
-        ]),
+        layout('./components/admin/Auth.tsx', [
+            layout('./pages/admin/layout.tsx', [
+                index('./pages/admin/index.tsx'),
+                route('/articles', './pages/admin/articles/index.tsx'),
+                route('/images', './pages/admin/images/index.tsx'),
+                route('/utilisateurs', './pages/admin/utilisateurs/index.tsx'),
+            ]),
+        ]), 
         route('/articles/:article', './pages/admin/articles/article.tsx')
     ]),
     route('/login', './pages/login.tsx')

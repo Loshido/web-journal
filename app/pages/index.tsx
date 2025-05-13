@@ -1,6 +1,5 @@
 import Header from "~/components/header"
 import Footer from "~/components/footer"
-
 import { type ArticleData, listArticles } from "~/lib/articles";
 import { Route } from "./+types";
 import Lien from "~/components/Lien";
@@ -95,9 +94,8 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
         </div>
         </div>
         <Footer/>
-
-
     {/* <div>
         <img className="m-4" src="/routes.png"/>
     </div> */}
-    </div>}
+    </div>
+}

@@ -45,7 +45,7 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
 
     return <>
         <div className="w-screen h-full pb-4 md:pb-0 p-4 gap-3 overflow-y-scroll
-            grid grid-cols-1 grid-rows-none sm:grid-cols-2 md:grid-cols-3 md:grid-rows-6 lg:grid-cols-4 lg:grid-rows-5">
+            grid grid-cols-1 grid-rows-none sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {
                 articles != undefined && articles.map((article, i) => <Article 
                     key={i} article={article} 

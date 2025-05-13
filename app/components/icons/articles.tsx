@@ -7,7 +7,7 @@ export default (props: Props) => (
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth={2}
+        strokeWidth={1.5}
     >
         <path d="M15 18h-5" />
         <path d="M18 14h-8" />
