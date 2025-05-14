@@ -25,6 +25,8 @@
 - `bun dev` permet de lancer un serveur de développement *(ou `npm run dev`)*
 - `bun run build` permet de compiler l'application. *(ou `npm run build`)*
 
+`--host` permet d'accéder au site depuis l'extérieur / wifiisen (écoute sur toutes les interfaces).
+
 ### Connexion
 - Identifiant : `guest`
 - Mots de pase : `guest`
