@@ -31,7 +31,8 @@
             "likes": 0,
             "dislikes": 0
         },
-        "date": 1722259784620
+        "date": 1722259784620,
+        "image": "http://localhost:5173/images/arma.jpg"
     },
     {
         "id": "fanta-article",
@@ -53,6 +54,7 @@
             "likes": 0,
             "dislikes": 0
         },
-        "date": 1722259784620
+        "date": 1722259784620,
+        "image": "http://localhost:5173/images/a.png"
     }
 ]

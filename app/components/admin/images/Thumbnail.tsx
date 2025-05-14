@@ -14,7 +14,7 @@ export function ThumbnailImage(props: { url: string, nom: string }) {
     return <>
         <div className="absolute h-full w-full top-0 left-0 
         -z-10 bg-black/10 backdrop-blur-xs"/>
-        <img loading="lazy" src={props.url} alt={props.nom}   
+        <img src={props.url} alt={props.nom}   
             className="absolute h-full w-full object-contain top-0 left-0 -z-20" />
     </>
 }

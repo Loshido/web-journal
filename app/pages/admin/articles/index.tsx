@@ -44,15 +44,17 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
     }
 
     return <>
-        <div className="w-screen h-full pb-4 md:pb-0 p-4 gap-3 overflow-y-scroll
-            grid grid-cols-1 grid-rows-none sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {
-                articles != undefined && articles.map((article, i) => <Article 
-                    key={i} article={article} 
-                    supprimer={supprimer}/>)
-            }
-            <CreationArticle/>
-        </div>
+        <section className="w-full h-full p-4">
+            <div className="w-full h-full gap-3 overflow-y-scroll
+                flex flex-row flex-wrap content-start">
+                {
+                    articles != undefined && articles.map((article, i) => <Article 
+                        key={i} article={article} 
+                        supprimer={supprimer}/>)
+                }
+                <CreationArticle/>
+            </div>
+        </section>
         <Suppression
             id={id}
             annuler={() => setId(null)}
