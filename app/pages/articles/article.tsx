@@ -2,6 +2,7 @@ import data from "~/../data/articles.json";
 import Lien from "~/components/Lien";
 import { useParams } from "react-router";
 
+import "~/components/articles/article.css"
 export default () => {
   const { article: id } = useParams();
   const article = data.find((a) => a.id === id);
@@ -33,10 +34,10 @@ export default () => {
           className="w-full rounded-lg shadow-md mb-6"
         /> */}
 
-        <p
-          className="mb-4"
+        <div
+          className="mb-4 article"
           dangerouslySetInnerHTML={{ __html: article.contenu }}
-        ></p>
+        ></div>
 
         <p className="text-sm flex gap-2 text-black">
           Source :<div className="text-blue-400">ISEN-Web</div>
