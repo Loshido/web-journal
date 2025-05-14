@@ -21,6 +21,8 @@ export default () => {
           <h1 className="text-3xl font-bold mb-4">{article.titre}</h1>
           <div className="flex items-center gap-5 flex-row text-xl mb-4">
             <p>{article.description}</p>
+
+             {/* article.date est un nombre (un timestamp), pas un objet Date. En JS, les nombres = pas de méthode .toLocaleDateString(), ce qui provoque une erreur */}
             <p>{new Date(article.date).toLocaleDateString()}</p>
           </div>
         </div>
