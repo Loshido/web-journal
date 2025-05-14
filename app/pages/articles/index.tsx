@@ -27,7 +27,7 @@ export default () => {
                   className="bg-blue-600 col-span-1 rounded-2xl h-60 overflow-hidden grid grid-rows-3"
                 >
                   <div className="row-span-2"></div>
-                  <div className="bg-gray-300 rounded-b-2xl text-xl flex items-center p-5">
+                  <div className="bg-gray-200 rounded-b-2xl text-xl flex items-center p-5">
                     {article.titre}
                   </div>
                 </div>

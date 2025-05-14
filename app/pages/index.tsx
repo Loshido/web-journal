@@ -34,7 +34,7 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
                             </div>
                         </div>
                     </div>
-                    <Lien to="/" className="bg-amber-300 col-span-2 rounded-2xl grid grid-rows-4 row-span-1">
+                    <Lien to={`/articles/` + articles[0].id} className="bg-amber-300 col-span-2 rounded-2xl grid grid-rows-4 row-span-1">
                         <div className="row-span-3"></div>
                     </Lien>
                 </div>
@@ -45,8 +45,8 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
                  md:w-6xl md:grid-cols-5">
                     <div className="bg-red-200 col-span-2 rounded-2xl grid grid-rows-3
                     md:col-span-2 md:grid-rows-4">
-                        <Lien to="/" className="row-span-2 md:row-span-3"></Lien>
-                        <div className="bg-gray-300 rounded-b-2xl p-3 flex items-center justify-center row-span-1
+                        <Lien to={`/articles/` + articles[1].id} className="row-span-2 md:row-span-3"></Lien>
+                        <div className="bg-gray-200 rounded-b-2xl p-3 flex items-center justify-center row-span-1
                         sm:text-xl">
                             <div className="flex items-center">
                                 {articles[1].titre}
@@ -55,15 +55,15 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
                     </div>
                     <div className="bg-red-200 col-span-2 rounded-2xl grid grid-rows-3
                     md:col-span-2 md:grid-rows-4">
-                        <Lien to="/" className="row-span-2 md:row-span-3"></Lien>
-                        <div className="bg-gray-300 rounded-b-2xl p-4 flex items-center justify-center row-span-1
+                        <Lien to={`/articles/` + articles[2].id} className="row-span-2 md:row-span-3"></Lien>
+                        <div className="bg-gray-200 rounded-b-2xl p-4 flex items-center justify-center row-span-1
                         sm:text-xl">
                             <div className="flex items-center">
                                 {articles[2].titre}
                             </div>
                         </div>
                     </div>
-                    <Lien to="/" className="bg-red-200 col-span-2 rounded-2xl flex flex-col justify-center items-center gap-5
+                    <Lien to="/articles" className="bg-gray-200 col-span-2 rounded-2xl flex flex-col justify-center items-center gap-5
                      md:col-span-1">
                         <div className="text-xl">---&gt;</div>
                         <div className="text-xl">Voir plus d'articles</div>
@@ -73,7 +73,7 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
         {/* <div className="mb-10 mt-10 w-svw h-auto text-7xl">
             <div id="ligne-scroll" className="flex flex-wrap break-all">DES ARTICLES LIMPIDES. C'EST VERT C'EST CLAIR. LES ARTICLES DU FUTUR. AHA</div>
         </div> */}
-        <div className="bg-gray-100 mt-10 mb-10 w-svw h-svh flex flex-col">
+        <div className="bg-gray-100 mt-10 w-svw h-svh flex flex-col">
             <div className="w-svw h-full grid grid-col-1 grid-rows-3  p-5 gap-4
             md:grid-cols-11 md:grid-rows-10">
                 <div className="flex items-center justify-center row-start-1 text-xl text-center sm:text-4xl
