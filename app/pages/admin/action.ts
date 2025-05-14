@@ -9,7 +9,8 @@ type UpdateRequest = {
     id?: string,
     titre?: string,
     description?: string,
-    contenu?: string
+    contenu?: string,
+    image?: string
 }
 
 type DeleteRequest = {
@@ -28,13 +29,15 @@ export const traitementRequete = async (request: Request): Promise<Requests> => 
     const titre = formData.get('titre')?.toString();
     const description = formData.get('description')?.toString()
     const contenu = formData.get('contenu')?.toString()
+    const image = formData.get('image')?.toString()
 
     if(formData.has('update')) return {
         type: 'update',
         id,
         titre,
         description,
-        contenu
+        contenu,
+        image
     }
     else if(id && (!description || !titre)) return {
         type: 'delete',

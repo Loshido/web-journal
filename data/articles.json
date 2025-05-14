@@ -8,7 +8,8 @@
             "likes": 19,
             "dislikes": 0
         },
-        "date": 1744455312862
+        "date": 1744455312862,
+        "image": "http://localhost:5173/images/a.gif"
     },
     {
         "id": "epargner-jeune-astuces",

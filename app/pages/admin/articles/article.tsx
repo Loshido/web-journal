@@ -19,7 +19,8 @@ export async function action({ request, params }: Route.ActionArgs) {
         id: donnees.id,
         titre: donnees.titre,
         description: donnees.description,
-        contenu: donnees.contenu
+        contenu: donnees.contenu,
+        image: donnees.image
     })
     if(donnees.id && donnees.id !== previousId) {
         throw redirect('/admin/' + donnees.id)
@@ -109,6 +110,8 @@ export default ({ loaderData }: Route.ComponentProps) => {
                                 form.set('titre', article.titre)
                             if(loaderData.description !== article.description) 
                                 form.set('description', article.description)
+                            if(loaderData.image !== article.image && article.image) 
+                                form.set('image', article.image)
                             if(loaderData.contenu !== article.contenu) 
                                 form.set('contenu', article.contenu)
 

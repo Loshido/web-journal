@@ -47,4 +47,13 @@ export default ({ article, update }: MetaProps) => <>
                 update({ description: target.value });
             }} className="px-3 py-2 outline-none col-span-2" defaultValue={article.description} />
     </Item>
+    <Item>
+        <Key>
+            image
+        </Key>
+        <input type="text" onInput={(event) => {
+                const target = event.target as HTMLInputElement
+                update({ image: target.value });
+            }} className="px-3 py-2 outline-none col-span-2" defaultValue={article.image} />
+    </Item>
 </>
