@@ -7,8 +7,8 @@ type Props = {
 }
     
 export default ({ article, supprimer }: Props) => <article 
-    className="p-3 w-full h-full max-h-48 bg-black/5
-    flex flex-col justify-between">
+    className="p-3 h-full lg:w-[32%] sm:w-[49%] w-full max-h-48 bg-black/5
+    flex flex-col justify-between relative">
     <div>
         <h3 className="font-semibold text-lg">
             { article.titre }
@@ -28,4 +28,8 @@ export default ({ article, supprimer }: Props) => <article
             Supprimer
         </div>
     </div>
+    {
+        article.image && <img src={article.image} alt="Miniature article" 
+            className="absolute top-0 left-0 -z-10 w-full h-full object-cover opacity-25" />
+    }
 </article>

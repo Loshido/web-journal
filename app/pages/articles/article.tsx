@@ -3,6 +3,7 @@ import Lien from "~/components/Lien";
 import { useParams } from "react-router";
 import Header from "~/components/header/index";
 
+import "~/components/articles/article.css"
 export default () => {
   const { article: id } = useParams();
   const article = data.find((a) => a.id === id);
