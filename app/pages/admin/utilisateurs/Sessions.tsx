@@ -32,7 +32,7 @@ export default ({ sessions, supprimer }: Props) => {
                 </div>
                 <div className="w-full h-full flex flex-row justify-end items-center">
                     <button className="px-2 py-1 bg-black text-white text-xs hover:bg-black/75 active:bg-black/50
-                        transition-colors select-none cursor-pointer"
+                        transition-colors select-none cursor-pointer rounded-sm"
                         onClick={() => supprimer(session.token)}>
                         Supprimer
                     </button>
