@@ -2,14 +2,14 @@ import { Form } from "react-router";
 import Lien from "~/components/Lien"
 
 
-export default () => <Form method="POST" className="flex flex-col gap-6">
-    <p className="mx-2 px-2 py-1 font-semibold text-lg">
+export default () => <Form method="POST" className="flex flex-col gap-6 items-center sm:items-stretch">
+    <p className="mx-2 px-2 py-1 font-semibold text-lg text-center justify-center items-center">
         Connectez-vous à la page d'administration
     </p> 
-    <input className="outline-none mx-2 px-4 py-2 bg-black/5 w-full rounded-lg"
+    <input className="outline-none mx-2 px-4 py-2 bg-black/5 w-fit sm:w-full rounded-lg"
         type="text" placeholder="Identifiant" name="id"
         autoComplete="off" />
-    <input className="outline-none mx-2 px-4 py-2 -mt-4 bg-black/5 w-full rounded-lg"
+    <input className="outline-none mx-2 px-4 py-2 -mt-4 bg-black/5 w-fit sm:w-full rounded-lg"
         type="password" placeholder="Mots de passe" name="pass"
         autoComplete="off" />
     <div className="flex justify-between">

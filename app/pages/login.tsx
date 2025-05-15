@@ -1,5 +1,4 @@
 import Formulaire from "~/components/admin/login";
-import Lien from "~/components/Lien";
 import { Route } from "./+types/login";
 import { redirect } from "react-router";
 import { traitementsCookies } from "~/components/admin/Auth";
@@ -45,13 +44,11 @@ export async function loader({ request }: Route.LoaderArgs): Promise<void> {
 
 export default ({  }: Route.ComponentProps) => {
 
-    return <section className="w-screen h-screen grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5">
-        <img className="w-full h-full md:col-span-5 absolute z-0" src="/Dev.jpeg"/>
-        <div className="md:col-span-3 md:col-start-2 z-10 md:row-span-2 flex flex-col justify-center items-center">
-            <div className=" w-xl h-1/2  flex justify-center items-center rounded-2xl bg-white/80">
-
+    return <section className="w-screen h-screen grid grid-cols-1 md:grid-cols-5">
+        <img className="w-full h-full col-span-1 md:col-span-5 absolute z-0" src="/Dev.jpeg"/>
+        <div className="col-span-1 md:col-span-3 md:col-start-2 z-10 md:row-span-2 flex flex-col justify-center items-center">
+            <div className="w-fit md:w-xl h-1/2  flex justify-center items-center rounded-2xl bg-white/80">
                 <Formulaire/>   
-
             </div>
             
         </div>

@@ -2,7 +2,7 @@
 import Lien from "~/components/Lien";
 
 export default function Header() {
-    return <header className="flex h-20 bg-gray-100 md:justify-between items-center text-center md:p-10 text-xl">
+    return <header className="flex h-20 bg-gray-100 justify-center md:justify-between items-center text-center md:p-10 text-xl">
         <Lien to="/" className="flex p-2">
             Accueil
         </Lien>
