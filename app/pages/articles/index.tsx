@@ -38,8 +38,8 @@ export default function Articles() {
       <Header />
 
       <div className="flex flex-col items-center w-screen mb-10 mt-5">
-        <h1 className="font-bold my-10 text-3xl">
-          Retrouvez tous les articles sur cette même page 📄
+        <h1 className="font-semibold my-10 text-3xl">
+          Retrouvez tous les articles sur cette même page
         </h1>
 
         <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mt-6 gap-4 px-4">
