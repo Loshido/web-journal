@@ -29,7 +29,7 @@ export default ({ users, supprimer, renommer, nouveau }: Props) => {
             </button>)
         }
         <button className="px-2 py-1 bg-black border border-white text-white
-            transition-colors hover:bg-black/75 active:bg-black/50 cursor-pointer"
+            transition-colors hover:bg-black/75 active:bg-black/50 cursor-pointer rounded-sm"
             onClick={nouveau}>
             Créer un utilisateur
         </button>
@@ -41,12 +41,12 @@ export default ({ users, supprimer, renommer, nouveau }: Props) => {
                 </h1>
                 <div className="flex flex-row items-center gap-2 py-4">
                     <button className="px-2 py-1 border border-black/5 transition-colors 
-                        hover:bg-black/5 active:bg-black/10 cursor-pointer"
+                        hover:bg-black/5 active:bg-black/10 cursor-pointer rounded-sm"
                         onClick={() => supprimer(selection)}>
                         supprimer
                     </button>
                     <button className="px-2 py-1 border border-black/5 transition-colors 
-                        hover:bg-black/5 active:bg-black/10 cursor-pointer"
+                        hover:bg-black/5 active:bg-black/10 cursor-pointer rounded-sm"
                         onClick={() => renommer(selection)}>
                         renommer
                     </button>

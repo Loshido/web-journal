@@ -21,7 +21,7 @@ export default () => {
         if(!ouvert) setOuvert(true);
     }}
         className="p-3 w-full h-full max-h-48 text-xl font-semibold transition-colors cursor-pointer
-        flex flex-col justify-center items-center bg-black/5 hover:bg-black/15">
+        flex flex-col justify-center items-center bg-black/5 hover:bg-black/15 rounded-sm">
         Créer un article 📰
 
         {
