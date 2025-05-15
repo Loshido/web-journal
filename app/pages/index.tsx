@@ -15,7 +15,7 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
     return <div>
         <Header/>
         <div className="mb-10 mt-10 flex flex-col items-center justify-center">
-            <div className="h-20 w-full flex items-center justify-center text-center text-xl p-5 mb-10
+            <div className="h-20 w-full flex items-center justify-center text-center font-semibold text-xl p-5 mb-10
             md:text-3xl">Le site où chaque article éclaire, questionne et inspire.</div>
             <div className="bg-gray-100 rounded-2xl w-screen h-screen p-5 flex items-center justify-center
              md:w-8xl md:h-100">
@@ -35,7 +35,9 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
                         </div>
                     </div>
                     <Lien to={`/articles/` + articles[0].id} className="bg-amber-300 col-span-2 rounded-2xl grid grid-rows-4 row-span-1">
-                        <div className="row-span-3"></div>
+                        <div className="row-span-3">
+                            <img src={articles[0].image} alt="" />
+                        </div>
                     </Lien>
                 </div>
             </div>

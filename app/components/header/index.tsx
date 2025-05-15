@@ -10,7 +10,7 @@ export default function Header() {
             <Lien to="/articles" className="hover:underline underline-offset-8 p-2">
                 Articles
             </Lien>
-            <Lien to="/login" className="border-2 p-2 hover:bg-black hover:text-white rounded-xl">
+            <Lien to="/login" className="border-2 p-2 hover:bg-black hover:text-white rounded-xl transition-colors duration-200">
                 Connexion
             </Lien>
         </div>

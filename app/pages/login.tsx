@@ -45,15 +45,15 @@ export async function loader({ request }: Route.LoaderArgs): Promise<void> {
 
 export default ({  }: Route.ComponentProps) => {
 
-    return <section className="w-screen h-screen grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5
-        bg-gradient-to-br from-white to-blue-700/10">
-        <div className="md:col-span-2 hidden sm:block"/>
-        <div className="md:col-span-3 bg-black/5 backdrop-blur-xl p-4 flex flex-col gap-4 justify-center relative">
-            <Lien className=" absolute top-4 left-4
-                text-white px-2 py-1 bg-black/10 hover:bg-black/5 transition-colors w-fit" to="/">
-                Revenir à la page d'accueil
-            </Lien>
-            <Formulaire/>
+    return <section className="w-screen h-screen grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5">
+        <img className="w-full h-full md:col-span-5 absolute z-0" src="/Dev.jpeg"/>
+        <div className="md:col-span-3 md:col-start-2 z-10 md:row-span-2 flex flex-col justify-center items-center">
+            <div className=" w-xl h-1/2  flex justify-center items-center rounded-2xl bg-white/80">
+
+                <Formulaire/>   
+
+            </div>
+            
         </div>
     </section>
 }
