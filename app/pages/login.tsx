@@ -18,11 +18,11 @@ export async function action({
     // S'ils ne sont pas donnés on renvoie à /admin, 
     // l'utilisateur étant potentiellement déjà connecté
     // s'il ne l'est pas, il sera dégagé par le middleware.
-    if(!pass || !id) throw redirect('/admin');
+    if(!pass || !id) throw redirect('/login');
 
     // On vérifie avec la "base de données"
     const token = login(id.toString(), pass.toString());
-    if(token.length === 0) throw redirect('/admin');
+    if(token.length === 0) throw redirect('/login');
 
     const expiration = new Date(Date.now() + TOKEN_EXPIRATION).toUTCString()
 
