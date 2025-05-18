@@ -63,7 +63,7 @@ export default ({ loaderData: images }: Route.ComponentProps) => {
         <Form method="post" encType="multipart/form-data">
             {/* Lorsqu'il cliquer sur le label, l'input est sélectionné */}
             <label className="relative h-48 border border-black/25 p-4
-            flex flex-col gap-0 items-center justify-center text-center">
+            flex flex-col gap-0 items-center justify-center text-center rounded-sm">
                 <p>Cliquer pour séléctionner une image</p>
                 {/* On cache l'input, pour mettre notre propre interface */}
                 <input type="file" name="image" id="image" 

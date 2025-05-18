@@ -1,5 +1,4 @@
 import Formulaire from "~/components/admin/login";
-import Lien from "~/components/Lien";
 import { Route } from "./+types/login";
 import { redirect } from "react-router";
 import { traitementsCookies } from "~/components/admin/Auth";
@@ -19,11 +18,11 @@ export async function action({
     // S'ils ne sont pas donnés on renvoie à /admin, 
     // l'utilisateur étant potentiellement déjà connecté
     // s'il ne l'est pas, il sera dégagé par le middleware.
-    if(!pass || !id) throw redirect('/admin');
+    if(!pass || !id) throw redirect('/login');
 
     // On vérifie avec la "base de données"
     const token = login(id.toString(), pass.toString());
-    if(token.length === 0) throw redirect('/admin');
+    if(token.length === 0) throw redirect('/login');
 
     const expiration = new Date(Date.now() + TOKEN_EXPIRATION).toUTCString()
 
@@ -45,15 +44,13 @@ export async function loader({ request }: Route.LoaderArgs): Promise<void> {
 
 export default ({  }: Route.ComponentProps) => {
 
-    return <section className="w-screen h-screen grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5
-        bg-gradient-to-br from-white to-blue-700/10">
-        <div className="md:col-span-2 hidden sm:block"/>
-        <div className="md:col-span-3 bg-black/5 backdrop-blur-xl p-4 flex flex-col gap-4 justify-center relative">
-            <Lien className=" absolute top-4 left-4
-                text-white px-2 py-1 bg-black/10 hover:bg-black/5 transition-colors w-fit" to="/">
-                Revenir à la page d'accueil
-            </Lien>
-            <Formulaire/>
+    return <section className="w-screen h-screen grid grid-cols-1 md:grid-cols-5">
+        <img className="w-full h-full col-span-1 md:col-span-5 absolute z-0" src="/Dev.jpeg"/>
+        <div className="col-span-1 md:col-span-3 md:col-start-2 z-10 md:row-span-2 flex flex-col justify-center items-center">
+            <div className="w-fit md:w-xl h-1/2  flex justify-center items-center rounded-2xl bg-white/80">
+                <Formulaire/>   
+            </div>
+            
         </div>
     </section>
 }

@@ -2,7 +2,7 @@
 export function Action(props: { titre: string, click: () => void }) {
     return <div 
         className="bg-white px-2 py-1 text-black hover:bg-white/75 transition-colors
-        cursor-pointer select-none"
+        cursor-pointer select-none rounded-sm"
         onClick={props.click}>
         {
             props.titre
@@ -13,9 +13,9 @@ export function Action(props: { titre: string, click: () => void }) {
 export function ThumbnailImage(props: { url: string, nom: string }) {
     return <>
         <div className="absolute h-full w-full top-0 left-0 
-        -z-10 bg-black/10 backdrop-blur-xs"/>
+        -z-10 bg-black/10 backdrop-blur-xs rounded-sm"/>
         <img src={props.url} alt={props.nom}   
-            className="absolute h-full w-full object-contain top-0 left-0 -z-20" />
+            className="absolute h-full w-full object-contain top-0 left-0 -z-20 rounded-sm" />
     </>
 }
 
@@ -29,7 +29,7 @@ interface Thumbnail {
 }
 export default function(props: Thumbnail) {
     return <div className="relative h-48 min-w-64 border-black/25 p-4
-        flex flex-col gap-2">
+        flex flex-col gap-2 rounded-sm">
         <p className="font-semibold">
             { props.nom }
         </p>
