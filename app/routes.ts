@@ -22,9 +22,10 @@ export default [
                 route('/images', './pages/admin/images/index.tsx'),
                 route('/utilisateurs', './pages/admin/utilisateurs/index.tsx'),
             ]),
-            route('/articles/:article', './pages/admin/articles/article.tsx')
+            route('/articles/:article', './pages/admin/articles/article.tsx'),
         ]),
     ]),
+    route('/logout', './pages/admin/logout.tsx'),
     route('/login', './pages/login.tsx')
 
 ] satisfies RouteConfig
