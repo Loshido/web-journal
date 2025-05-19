@@ -8,6 +8,7 @@ import Fleche from "~/components/icons/fleche.tsx";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
 
+
 export default () => {
   const { article: id } = useParams();
   const article = data.find((a) => a.id === id);
@@ -19,6 +20,7 @@ export default () => {
       </div>
     );
   }
+  
 
   return (
     <div>
@@ -66,8 +68,8 @@ export default () => {
 
           <div className="flex items-center bg-gray-100 rounded-3xl w-fit p-1 overflow-hidden">
             <div className="flex items-center">
-              <button className="flex items-center px-3 py-2 gap-2  rounded-l-3xl hover:bg-gray-200 ">
-                <PouceUp className="w-5 h-5  fill-blue-400 stroke-1 stroke-gray-200" />
+              <button className="flex items-center px-3 py-2 gap-2  rounded-l-3xl hover:bg-gray-200 " >
+                <PouceUp  className="w-5 h-5  fill-blue-400 stroke-1 stroke-gray-200" />
                 <p className="text-sm font-medium text-blue-400">
                   {article.reaction.likes}
                 </p>

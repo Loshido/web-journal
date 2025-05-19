@@ -40,7 +40,11 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
                     </div>
                     <Lien to={`/articles/` + articles[0].id} className="bg-amber-300 col-span-2 rounded-2xl grid grid-rows-4 row-span-1">
                         <div className="row-span-4">
-                            <img className="rounded-2xl w-full h-full" src="/Dev.jpeg?jsx"/>
+                               <img
+                                 src={articles[0].image || "/Bureau.jpeg "}
+                                      alt="Aucune image"
+                                         className="rounded-2xl w-full h-full"
+                                 />
                         </div>
                     </Lien>
                 </div>
