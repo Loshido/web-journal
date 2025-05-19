@@ -43,9 +43,9 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
                             </div>
                         </div>
                     </div>
-                    <Lien to={`/articles/` + articles[0].id} className="bg-gray-200 col-span-2 rounded-2xl grid grid-rows-4 row-span-1">
-                        <div className="row-span-4">
-                            <img className="rounded-t-2xl w-full h-full object-cover" src={articles[0].image || "Bureau.jpeg"}/>
+                    <Lien to={`/articles/` + articles[0].id} className="bg-gray-200 col-span-2 rounded-2xl grid row-span-1">
+                        <div className="flex">
+                            <img className="rounded-2xl w-fit h-full object-cover" src={articles[0].image || "Bureau.jpeg"}/>
                         </div>
                     </Lien>
                 </div>
@@ -57,7 +57,7 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
                     <div className="bg-gray-200 col-span-2 rounded-2xl grid grid-rows-3
                     md:col-span-2 md:grid-rows-4">
                         <Lien to={`/articles/` + articles[1].id} className="row-span-2 md:row-span-3">
-                            <img className="rounded-t-2xl w-full h-full object-cover" src={articles[1].image || "Bureau.jpeg"}/>
+                            <img className="rounded-t-2xl w-fit h-full object-cover" src={articles[1].image || "Bureau.jpeg"}/>
                         </Lien>
                         <div className="bg-gray-200 rounded-b-2xl p-3 flex items-center justify-center row-span-1
                         sm:text-xl">
@@ -69,7 +69,7 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
                     <div className="bg-gray-200 col-span-2 rounded-2xl grid grid-rows-3
                     md:col-span-2 md:grid-rows-4">
                         <Lien to={`/articles/` + articles[2].id} className="row-span-2 md:row-span-3">
-                            <img className="rounded-t-2xl w-full h-full object-cover" src={articles[2].image || "Bureau.jpeg"}/>
+                            <img className="rounded-t-2xl w-fit h-full" src={articles[2].image || "Bureau.jpeg"}/>
                         </Lien>
                         <div className="bg-gray-200 rounded-b-2xl p-4 flex items-center justify-center row-span-1
                         sm:text-xl">
