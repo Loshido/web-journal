@@ -23,41 +23,6 @@
         "date": 1744459784620
     },
     {
-        "id": "blllll",
-        "titre": "blablabla Livioovivo",
-        "description": "tjs blablater blblbl",
-        "contenu": "<h1>Épargner quand on est jeune : mission possible !</h1><p>Épargner dès le début de sa vie active permet de construire sereinement son avenir. Même 10€ par mois font une différence à long terme.</p><p>Commencez par définir un objectif : voyage, permis, projet pro… Ensuite, automatisez vos virements vers un livret ou une solution adaptée aux jeunes. Plus tôt vous commencez, plus les intérêts composés travaillent pour vous !</p>",
-        "reaction": {
-            "likes": 18,
-            "dislikes": 0
-        },
-        "date": 1722259784620,
-        "image": "http://localhost:5173/images/arma.jpg"
-    },
-    {
-        "id": "fanta-article",
-        "titre": "salut à tous c'est fanta",
-        "description": "Minecraft Salut à tous c'est Fanta Salut à tous c'est Fanta",
-        "contenu": "<h1>Épargner quand on est jeune : mission possible !</h1><p>Épargner dès le début de sa vie active permet de construire sereinement son avenir. Même 10€ par mois font une différence à long terme.</p><p>Commencez par définir un objectif : voyage, permis, projet pro… Ensuite, automatisez vos virements vers un livret ou une solution adaptée aux jeunes. Plus tôt vous commencez, plus les intérêts composés travaillent pour vous !</p>",
-        "reaction": {
-            "likes": 19,
-            "dislikes": 0
-        },
-        "date": 1722259784620,
-        "image": "/assets/Dev.jpeg"
-    },
-    {
-        "id": "1234567890",
-        "titre": "bouh",
-        "description": "HGFDXHJKHGFCVBN?JHGFXCJHGF",
-        "contenu": "<p>Hello, World!</p>",
-        "reaction": {
-            "likes": 0,
-            "dislikes": 0
-        },
-        "date": 1747212806010
-    },
-    {
         "id": "vie-etudiante",
         "titre": "La Vie Étudiante à Toulon",
         "description": "Une ville dynamique entre mer et collines, idéale pour étudier et s'épanouir",
@@ -68,5 +33,57 @@
         },
         "date": 1747677171450,
         "image": "https://partir.ouest-france.fr/magazine/wp-content/uploads/2022/10/lsntnybyltk.jpg"
+    },
+    {
+        "id": "ahhhh",
+        "titre": "Une ville étudiante",
+        "description": "Cette ville n'est pas comme les autres",
+        "reaction": {
+            "likes": 0,
+            "dislikes": 0
+        },
+        "date": 1747681639110
+    },
+    {
+        "id": "ville",
+        "titre": "Une ville pas comme les autres",
+        "description": "Cette ville est unique",
+        "reaction": {
+            "likes": 0,
+            "dislikes": 0
+        },
+        "date": 1747681852925
+    },
+    {
+        "id": "vie-etudiante-ia",
+        "titre": "La vie étudiante à Toulon",
+        "description": "Une ville dynamique entre mer et collines, idéale pour étudier et s'épanouir",
+        "reaction": {
+            "likes": 0,
+            "dislikes": 0
+        },
+        "date": 1747682176203,
+        "contenu": "<h1>Vie étudiante à Toulon</h1><p>Une ville dynamique entre mer et collines, idéale pour étudier et s'épanouir, Toulon offre une expérience unique et enrichissante.</p><p>Située au cœur de la Provence, cette cité maritimes offre une multitude d'activités et de paysages. Des musées, des parcs et des promenades en mer sont à votre portée, tout en vous permettant de découvrir les petites boutiques et des restaurants traditionnels.</p><p>L'environnement est exceptionnel, avec des paysages marins paradisiques et des collines verdoyantes. La ville est également située au cœur de la route des Anglais, une autoroute qui permet de découvrir la région en quelques heures.</p>"
+    },
+    {
+        "id": "vie-etudiante-ia",
+        "titre": "Vie étudiante à Toulon",
+        "description": "Une ville dynamique entre mer et collines, idéale pour étudier et s'épanouir\n",
+        "reaction": {
+            "likes": 0,
+            "dislikes": 0
+        },
+        "date": 1747682235945
+    },
+    {
+        "id": "repas-étudiants",
+        "titre": "Manger Malin : Le Guide Ultime des Bons Plans Repas Étudiants en 2025",
+        "description": "Étudiant fauché mais ventre affamé ? Ce guide complet rassemble tous les bons plans pour manger équilibré sans exploser ton budget. Restauration universitaire, food trucks pas chers, applis anti-gaspi, supermarchés malins, recettes rapides à moins de 3 €, et réductions spéciales étudiants : découvre toutes les astuces pour bien manger, pour presque rien. Ton porte-monnaie (et ton estomac) vont te remercier !",
+        "contenu": "```html\n<h1>Manger Malin : Le Guide Ultime des Bons Plans Repas Étudiants en 2025</h1>\n<p>Étudiant fauché mais ventre affamé ? Ce guide complet rassemble tous les bons plans pour manger équilibré sans exploser ton budget.</p>\n\n<p>Restauration universitaire :</p>\n<ul>\n  <li>Déjeuner : Pizza maison aux légumes, sandwichs à la mozzarella, salads aux fruits vertes</li>\n  <li>Déjeuner : Soupe aux légumes, burgers végétariens, pizza aux tomates</li>\n  <li>Déjeuner : Salades aux fruits frais, sandwiches à la hummus, pizzas aux légumes</li>\n</ul>\n\n<p>Food trucks pas chers :</p>\n<ul>\n  <li>Pizza à la mozzarella (10 €), burgers végétariens (15 €), ramen à la viande (12 €)</li>\n  <li>Salades aux fruits frais (5 €), sandwiches à la hummus (7 €), pizzas aux légumes (8 €)</li>\n</ul>\n\n<p>Applis anti-gaspi :</p>\n<",
+        "reaction": {
+            "likes": 0,
+            "dislikes": 0
+        },
+        "date": 1747682958114
     }
 ]

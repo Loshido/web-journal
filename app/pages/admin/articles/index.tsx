@@ -6,23 +6,31 @@ import Suppression from "~/components/admin/article/delete";
 import { Route } from "./+types";
 import { useSubmit } from "react-router";
 import { traitementRequete } from "../action";
+import ia from "~/lib/ia";
 
 export async function action({ request }: Route.ActionArgs) {
     const donnees = await traitementRequete(request)
     
     if(donnees.type === 'create') {
+        let contenu = '<p>Hello, World!</p>'
+        if(donnees.ia) {
+            contenu = await ia({
+                titre: donnees.titre,
+                description: donnees.description
+            })
+        }
+
         const article: ArticleData = {
             id: donnees.id,
             titre: donnees.titre,
             description: donnees.description,
-            contenu: '<p>Hello, World!</p>',
+            contenu,
             reaction: {
                 likes: 0,
                 dislikes: 0
             },
             date: Date.now()
         }
-    
         createArticle(article);
     } else if(donnees.type === 'delete') {
         deleteArticle(donnees.id);
