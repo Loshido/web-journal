@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: "BluuNext";
+    src: url(/assets/BluuNext.otf);
+}
+
+body :is(h1, h2, h3){
+    font-family: "BluuNext";
+}
+body{
+    font-family: "Helvetica";
+}
 
 header > a {
     color: black;
