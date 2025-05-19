@@ -7,7 +7,12 @@ import Triangle from "~/components/icons/triangle";
 
 export async function loader(): Promise<ArticleData[]> {
     const articles = listArticles()
-    articles.sort((a, b) => b.reaction.likes - a.reaction.likes); //C'est ici que l'on trie la listArticles par le nombres de likes pour ensuite pouvoir les afficher
+
+    // C'est ici que l'on trie les articles par 
+    // le nombres de likes pour ensuite pouvoir les afficher
+    articles.sort((a, b) => b.reaction.likes - a.reaction.likes); 
+
+    // On récupère les 3 premiers articles
     return articles.slice(0, 3);
 }
 
@@ -107,8 +112,5 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
             </div>
         </div>
         <Footer/>
-    {/* <div>
-        <img className="m-4" src="/routes.png"/>
-    </div> */}
     </div>
 }

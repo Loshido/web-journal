@@ -7,6 +7,7 @@ interface Props {
     nouveau: () => void
 }
 
+// Gestion des utilisateurs
 export default ({ users, supprimer, renommer, nouveau }: Props) => {
     const [selection, setSelection] = useState<string>('') 
 

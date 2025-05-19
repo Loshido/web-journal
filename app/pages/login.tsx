@@ -20,16 +20,18 @@ export async function action({
     // s'il ne l'est pas, il sera dégagé par le middleware.
     if(!pass || !id) throw redirect('/login');
 
-    // On vérifie avec la "base de données"
+    // On vérifie avec la "base de données" si l'utilisateur a les bons identifiants.
     const token = login(id.toString(), pass.toString());
     if(token.length === 0) throw redirect('/login');
 
+    // L'expiration d'un cookie doit être sous le format UTC.
+    // https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#expiresdate
     const expiration = new Date(Date.now() + TOKEN_EXPIRATION).toUTCString()
 
     // On l'emmène à la page d'administration
     return redirect('/admin', {
         headers: {
-            // On dit au client d'ajouter un cookie avec le jeton d'authentification
+            // On donne un cookie, le jeton d'authentification
             'Set-Cookie': `token=${token}; Expires=${expiration}`
         }
     })
@@ -50,7 +52,6 @@ export default ({  }: Route.ComponentProps) => {
             <div className="w-fit md:w-xl h-1/2  flex justify-center items-center rounded-2xl bg-white/80">
                 <Formulaire/>   
             </div>
-            
         </div>
     </section>
 }

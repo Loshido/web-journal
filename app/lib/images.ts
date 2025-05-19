@@ -1,7 +1,7 @@
 import fs from "fs";
 
-// dans /public, les fichiers sont accessibles à /
-// donc /public/images/a.gif sera accessible à /images/a.gif
+// dans /public, les fichiers sont accessibles à http://localhost:5173/
+// donc /public/images/a.gif sera accessible à http://localhost:5173/images/a.gif
 const IMAGE_BUCKET = `./public/images/`
 export interface Image {
     nom: string,

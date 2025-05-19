@@ -1,4 +1,3 @@
-
 import Lien from "~/components/Lien";
 
 export default function Header() {
