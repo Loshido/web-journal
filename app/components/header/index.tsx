@@ -6,7 +6,7 @@ export default function Header() {
         <Lien to="/" className="flex p-2">
             Accueil
         </Lien>
-        <div className="flex gap-5">
+        <div className="flex items-center gap-5">
             <Lien to="/articles" className="hover:underline underline-offset-8 p-2">
                 Articles
             </Lien>
