@@ -23,6 +23,8 @@ type Unknown = {
 
 type Requests = CreateRequest | UpdateRequest | DeleteRequest | Unknown
 
+// On cherche à extraire les données 
+// de la requête et les formatter
 export const traitementRequete = async (request: Request): Promise<Requests> => {
     const formData = await request.formData();
     const id = formData.get('identifiant')?.toString();

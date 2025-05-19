@@ -3,17 +3,17 @@ import { Route } from "./+types";
 import { type Image, lister_images, importer_image, supprimer_image } from '~/lib/images'
 import Thumbnail from "~/components/admin/images/Thumbnail";
 
-// *ne fonctionne pas sur safari en http
+// *ne fonctionne pas sur safari en http (l'envoie d'image)
 export async function action({ request }: Route.ActionArgs) {
     const form = await request.formData()
     
-    // Suppression
+    // Suppression d'une image
     const suppression = form.get('supprimer')
     if(suppression) {
         return supprimer_image(suppression.toString())
     }
 
-    // Importation
+    // Importation d'une image
     const image = form.get('image')
     if(!(image instanceof File)) {
         return "Vous n'avez pas envoyé d'image."
