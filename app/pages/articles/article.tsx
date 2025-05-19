@@ -27,15 +27,16 @@ export default () => {
       <Header />
       <div className="max-w-3xl mx-auto px-4 py-8 text-gray-800">
         <div className="mb-10">
-          <div className="shadow-md flex flex-col rounded-2xl mb-10 items-center p-4">
-            <h1 className="text-3xl font-bold mb-4">{article.titre}</h1>
-            <div className="flex items-center gap-5 flex-row text-xl mb-4">
-              <p>{article.description}</p>
-
+          
+          <h1 className="text-4xl font-bold flex flex-col items-center mb-2">{article.titre}</h1>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-lg text-gray-600 mb-10 mt-2">
+            <p>{article.description}</p>
+            <p className="text-sm mt-2 sm:mt-0">
               {/* article.date est un nombre (un timestamp), pas un objet Date. En JS, les nombres = pas de méthode .toLocaleDateString(), ce qui provoque une erreur */}
-              <p>{new Date(article.date).toLocaleDateString()}</p>
-            </div>
+              {new Date(article.date).toLocaleDateString()}
+            </p>
           </div>
+      
 
 
           {/* en react on peut conditionner une div : condi && <comoponent/> */}
@@ -77,7 +78,7 @@ export default () => {
 
               <div className="w-px h-5 bg-gray-300 mx-1"></div>
 
-              <button className="flex items-center px-3 py-2 gap-2 rounded-r-3xl hover:bg-gray-200 ">
+              <button className="flex items-center px-3 py-2 gap-2 rounded-r-3xl hover:bg-gray-200 " >
                 <PouceDown className="w-5 h-5 fill-red-600 stroke-1 stroke-gray-200" />
                 <p className="text-sm font-medium text-red-600 ">
                   {article.reaction.dislikes}
@@ -92,3 +93,5 @@ export default () => {
     </div>
   );
 };
+
+
