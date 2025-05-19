@@ -9,7 +9,7 @@ import { traitementRequete } from "../action";
 
 export async function action({ request }: Route.ActionArgs) {
     const donnees = await traitementRequete(request)
-
+    
     if(donnees.type === 'create') {
         const article: ArticleData = {
             id: donnees.id,
