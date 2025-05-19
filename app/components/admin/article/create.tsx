@@ -33,7 +33,7 @@ export default () => {
                 <Form method="POST" className="flex flex-col w-full sm:w-auto sm:grid sm:grid-cols-3">
                     <Inputs/>
                     <button className="sm:border-t-0 sm:border-r-0 border outline-none p-3 transition-colors 
-                        cursor-pointer hover:bg-blue-500 hover:text-white" type="submit">
+                        cursor-pointer hover:bg-blue-500 hover:text-white" type="submit" onClick={() => setOuvert(false)}>
                         Créer l'article
                     </button>
                     <div onClick={() => setOuvert(false)}

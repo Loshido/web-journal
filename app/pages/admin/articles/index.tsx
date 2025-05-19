@@ -60,10 +60,11 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
             annuler={() => setId(null)}
             // Submit to the action handler (on the server)
             supprimer={async () => {
-                if(!id) return ;
+                if(!id) return;
                 const form = new FormData();
                 form.set('identifiant', id)
-
+                
+                setId(null)
                 await submit(form, {
                     method: 'POST'
                 })

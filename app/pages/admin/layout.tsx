@@ -9,6 +9,7 @@ import Users from "~/components/icons/users";
 import Lien from "~/components/Lien";
 
 import type { JSX } from "react";
+import Logout from "~/components/icons/logout";
 const liens = [
     {
         slot: <Back className="w-5 h-5"/>,
@@ -44,18 +45,26 @@ const liens = [
 export default function Layout() {
     const location = useLocation()
     return <div className="h-screen w-screen flex flex-col sm:flex-row">
-        <div className="w-screen flex-row sm:h-screen sm:w-auto p-1 sm:p-2 flex sm:flex-col gap-1 border-b sm:border-r border-black/5 text-black">
-            {
-                liens.map(lien => <Lien key={lien.chemin} 
-                    title={lien.titre}
-                    className={[
-                    location.pathname === lien.chemin 
-                        ? 'bg-black/15' : 'hover:bg-black/10',
-                    "p-3 rounded transition-colors text-black"].join(" ")}
-                    to={lien.chemin}>
-                    { lien.slot }
-                </Lien>)
-            }
+        <div className="w-screen justify-between flex-row sm:h-screen sm:w-auto p-1 sm:p-2 flex sm:flex-col gap-1 border-b sm:border-r border-black/5 text-black">
+            <div className="flex-row flex sm:flex-col gap-1">
+                {
+                    liens.map(lien => <Lien key={lien.chemin} 
+                        title={lien.titre}
+                        className={[
+                        location.pathname === lien.chemin 
+                            ? 'bg-black/15' : 'hover:bg-black/10',
+                        "p-3 rounded transition-colors text-black"].join(" ")}
+                        to={lien.chemin}>
+                        { lien.slot }
+                    </Lien>)
+                }
+            </div>
+            <div className="flex-row flex sm:flex-col gap-1">
+                <Lien title="Déconnexion" to="/logout" prefetch="none"
+                    className="hover:bg-black/10 p-3 rounded transition-colors text-black cursor-pointer">
+                    <Logout className="w-5 h-5"/>
+                </Lien>
+            </div>
         </div>
         <Outlet/>
     </div>
