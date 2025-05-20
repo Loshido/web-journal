@@ -56,17 +56,6 @@
     },
     {
         "id": "vie-etudiante-ia",
-        "titre": "La vie étudiante à Toulon",
-        "description": "Une ville dynamique entre mer et collines, idéale pour étudier et s'épanouir",
-        "reaction": {
-            "likes": 0,
-            "dislikes": 0
-        },
-        "date": 1747682176203,
-        "contenu": "<h1>Vie étudiante à Toulon</h1><p>Une ville dynamique entre mer et collines, idéale pour étudier et s'épanouir, Toulon offre une expérience unique et enrichissante.</p><p>Située au cœur de la Provence, cette cité maritimes offre une multitude d'activités et de paysages. Des musées, des parcs et des promenades en mer sont à votre portée, tout en vous permettant de découvrir les petites boutiques et des restaurants traditionnels.</p><p>L'environnement est exceptionnel, avec des paysages marins paradisiques et des collines verdoyantes. La ville est également située au cœur de la route des Anglais, une autoroute qui permet de découvrir la région en quelques heures.</p>"
-    },
-    {
-        "id": "vie-etudiante-ia",
         "titre": "Vie étudiante à Toulon",
         "description": "Une ville dynamique entre mer et collines, idéale pour étudier et s'épanouir\n",
         "reaction": {
@@ -85,5 +74,16 @@
             "dislikes": 0
         },
         "date": 1747682958114
+    },
+    {
+        "id": "cage",
+        "titre": "L'ingénieur qui fait du café",
+        "description": "Entre théorie et pratique, on apprend bien plus qu’à résoudre des équations en école d’ingénieur : on découvre comment bidouiller des solutions qui marchent – parfois même du premier coup ! Dans cet article, retour sur ces projets, astuces ou coups de génie d’étudiants qui, contre toute attente… font le café. Littéralement ou pas, à vous de juger.",
+        "contenu": "<h1>L'ingénieur qui fait du café</h1>\n<p>Entre théorie et pratique, on apprend bien plus qu’à résoudre des équations en école d'ingénieur : on découvre comment bidouiller des solutions qui marchent – parfois même du premier coup ! Dans cet article, retour sur ces projets, astuces ou coups de génie d'étudiants qui, contre toute attente… font le café. Littéralement ou pas, à vous de juger.</p>\n<img src=\"cafe.jpg\" alt=\"Un ingénieur faisant du café\" />",
+        "reaction": {
+            "likes": 0,
+            "dislikes": 0
+        },
+        "date": 1747762304433
     }
 ]
