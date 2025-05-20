@@ -12,7 +12,7 @@ export interface ArticleData {
     },
     date: number,
     image?: string,
-    autheur?: string
+    auteur?: string
 }
 
 export const listArticles = (): ArticleData[] => {
