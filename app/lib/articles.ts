@@ -10,8 +10,9 @@ export interface ArticleData {
         likes: number,
         dislikes: number,
     },
+    date: number,
     image?: string,
-    date: number
+    autheur?: string
 }
 
 export const listArticles = (): ArticleData[] => {

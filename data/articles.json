@@ -35,47 +35,6 @@
         "image": "https://partir.ouest-france.fr/magazine/wp-content/uploads/2022/10/lsntnybyltk.jpg"
     },
     {
-        "id": "ahhhh",
-        "titre": "Une ville étudiante",
-        "description": "Cette ville n'est pas comme les autres",
-        "reaction": {
-            "likes": 0,
-            "dislikes": 0
-        },
-        "date": 1747681639110
-    },
-    {
-        "id": "ville",
-        "titre": "Une ville pas comme les autres",
-        "description": "Cette ville est unique",
-        "reaction": {
-            "likes": 0,
-            "dislikes": 0
-        },
-        "date": 1747681852925
-    },
-    {
-        "id": "vie-etudiante-ia",
-        "titre": "Vie étudiante à Toulon",
-        "description": "Une ville dynamique entre mer et collines, idéale pour étudier et s'épanouir\n",
-        "reaction": {
-            "likes": 0,
-            "dislikes": 0
-        },
-        "date": 1747682235945
-    },
-    {
-        "id": "repas-étudiants",
-        "titre": "Manger Malin : Le Guide Ultime des Bons Plans Repas Étudiants en 2025",
-        "description": "Étudiant fauché mais ventre affamé ? Ce guide complet rassemble tous les bons plans pour manger équilibré sans exploser ton budget. Restauration universitaire, food trucks pas chers, applis anti-gaspi, supermarchés malins, recettes rapides à moins de 3 €, et réductions spéciales étudiants : découvre toutes les astuces pour bien manger, pour presque rien. Ton porte-monnaie (et ton estomac) vont te remercier !",
-        "contenu": "```html\n<h1>Manger Malin : Le Guide Ultime des Bons Plans Repas Étudiants en 2025</h1>\n<p>Étudiant fauché mais ventre affamé ? Ce guide complet rassemble tous les bons plans pour manger équilibré sans exploser ton budget.</p>\n\n<p>Restauration universitaire :</p>\n<ul>\n  <li>Déjeuner : Pizza maison aux légumes, sandwichs à la mozzarella, salads aux fruits vertes</li>\n  <li>Déjeuner : Soupe aux légumes, burgers végétariens, pizza aux tomates</li>\n  <li>Déjeuner : Salades aux fruits frais, sandwiches à la hummus, pizzas aux légumes</li>\n</ul>\n\n<p>Food trucks pas chers :</p>\n<ul>\n  <li>Pizza à la mozzarella (10 €), burgers végétariens (15 €), ramen à la viande (12 €)</li>\n  <li>Salades aux fruits frais (5 €), sandwiches à la hummus (7 €), pizzas aux légumes (8 €)</li>\n</ul>\n\n<p>Applis anti-gaspi :</p>\n<",
-        "reaction": {
-            "likes": 0,
-            "dislikes": 0
-        },
-        "date": 1747682958114
-    },
-    {
         "id": "cage",
         "titre": "L'ingénieur qui fait du café",
         "description": "Entre théorie et pratique, on apprend bien plus qu’à résoudre des équations en école d’ingénieur : on découvre comment bidouiller des solutions qui marchent – parfois même du premier coup ! Dans cet article, retour sur ces projets, astuces ou coups de génie d’étudiants qui, contre toute attente… font le café. Littéralement ou pas, à vous de juger.",
@@ -85,5 +44,16 @@
             "dislikes": 0
         },
         "date": 1747762304433
+    },
+    {
+        "id": "nutrition-etudiant",
+        "titre": "La Nutrition Maligne pour les Étudiants Pressés",
+        "description": "Entre les cours, les partiels et un budget souvent serré, bien manger à la fac peut sembler mission impossible. Cet article propose des conseils nutritionnels simples et accessibles pour les étudiants, avec des bons plans pour faire ses courses à petit prix, des astuces pour optimiser son temps en cuisine, et 5 recettes faciles, rapides et équilibrées à préparer en moins de 20 minutes. Parce que manger sain, c’est aussi booster sa concentration, son énergie… et son moral !",
+        "contenu": "<h1>La Nutrition Maligne pour les Étudiants Pressés</h1>\n\n<p>Entre les cours, les partiels et un budget souvent serré, bien manger à la fac peut sembler mission impossible. Pourtant, adopter une alimentation équilibrée est essentiel pour booster sa concentration, son énergie et son moral. Cet article vous propose des conseils nutritionnels simples et accessibles, des bons plans pour faire ses courses à petit prix, des astuces pour optimiser son temps en cuisine, et 5 recettes faciles, rapides et équilibrées à préparer en moins de 20 minutes.</p>\n\n<h2>Conseils Nutritionnels pour Étudiants</h2>\n\n<p>Manger sainement ne signifie pas nécessairement passer des heures en cuisine. Voici quelques conseils pour vous aider à adopter une alimentation équilibrée sans trop de contraintes :</p>\n\n<ul>\n    <li><strong>Petit-déjeuner équilibré</strong> : Commencez votre journée avec un petit-déjeuner riche en fibres et en protéines, comme des flocons d'avoine avec des fruits et du yaourt.</li>\n    <li><strong>Snacks sains</strong> : Préférez les fruits, les noix et les légumes crus aux snacks industriels.</li>\n    <li><strong>Hydratation</strong> : Buvez suffisamment d'eau tout au long de la journée.</li>\n    <li><strong>Repas équilibrés</strong> : Assurez-vous que chaque repas contient des protéines, des glucides complexes et des légumes.</li>\n</ul>\n\n<h2>Bons Plans pour Faire ses Courses à Petit Prix</h2>\n\n<p>Faire ses courses sans exploser son budget est possible avec quelques astuces :</p>\n\n<ul>\n    <li><strong>Liste de courses</strong> : Faites une liste avant de partir et tenez-vous-y pour éviter les achats impulsifs.</li>\n    <li><strong>Promotions et soldes</strong> : Profitez des promotions et des soldes pour acheter en plus grande quantité.</li>\n    <li><strong>Marchés locaux</strong> : Les marchés locaux offrent souvent des produits frais à des prix intéressants.</li>\n    <li><strong>Produits de saison</strong> : Les fruits et légumes de saison sont généralement moins chers et plus savoureux.</li>\n</ul>\n\n<h2>Astuces pour Optimiser son Temps en Cuisine</h2>\n\n<p>Voici quelques astuces pour gagner du temps en cuisine :</p>\n\n<ul>\n    <li><strong>Préparation à l'avance</strong> : Préparez vos repas pour la semaine le week-end ou le soir précédent.</li>\n    <li><strong>Utilisez des ustensiles pratiques</strong> : Des appareils comme le multicuiseur ou le mixeur peuvent vous faire gagner du temps.</li>\n    <li><strong>Simplifiez les recettes</strong> : Optez pour des recettes simples avec peu d'ingrédients.</li>\n    <li><strong>Utilisez des restes</strong> : Transformez les restes de repas en nouveaux plats pour éviter le gaspillage.</li>\n</ul>\n\n<h2>5 Recettes Faciles, Rapides et Équilibrées</h2>\n\n<p>Voici 5 recettes que vous pouvez préparer en moins de 20 minutes :</p>\n\n<h3>Salade de Quinoa</h3>\n<p>Ingrédients : Quinoa, légumes variés, huile d'olive, vinaigre balsamique, sel, poivre.</p>\n<p>Préparation : Cuire le quinoa selon les instructions du paquet. Mélanger avec des légumes coupés en dés, assaisonner avec de l'huile d'olive, du vinaigre balsamique, du sel et du poivre.</p>\n\n<h3>Omelette aux Légumes</h3>\n<p>Ingrédients : Œufs, légumes variés, huile d'olive, sel, poivre.</p>\n<p>Préparation : Faire revenir les légumes dans une poêle avec un peu d'huile d'olive. Ajouter les œufs battus, saler et poivrer. Cuire jusqu'à ce que l'omelette soit prise.</p>\n\n<h3>Bowl de Riz et Légumes</h3>\n<p>Ingrédients : Riz, légumes variés, sauce soja, huile de sésame, graines de sésame.</p>\n<p>Préparation : Cuire le riz selon les instructions du paquet. Mélanger avec des légumes saut",
+        "reaction": {
+            "likes": 0,
+            "dislikes": 0
+        },
+        "date": 1747772739313
     }
 ]

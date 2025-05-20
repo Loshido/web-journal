@@ -29,6 +29,7 @@ export async function action({ request }: Route.ActionArgs) {
                 likes: 0,
                 dislikes: 0
             },
+            autheur: donnees.ia ? 'Mistal' : undefined,
             date: Date.now()
         }
         createArticle(article);

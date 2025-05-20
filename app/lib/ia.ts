@@ -13,7 +13,8 @@ const ACCOUNT_ID = process.env.ACCOUNT_ID
 // https://dash.cloudflare.com/profile/api-tokens
 // Générez une clé avec les permissions sur la section IA
 const AI_TOKEN = process.env.AI_TOKEN 
-const MODEL = "@cf/google/gemma-2b-it-lora"
+// const MODEL = "@cf/google/gemma-2b-it-lora"
+const MODEL = "@cf/mistralai/mistral-small-3.1-24b-instruct"
 
 if(!ACCOUNT_ID || !AI_TOKEN) throw new Error("Les variables d'environments "
     + "ACCOUNT_ID et AI_TOKEN sont nécessaires pour utiliser l'IA!")
@@ -66,7 +67,8 @@ export default async (article: Article): Promise<string> => {
             body: JSON.stringify({
                 prompt: PROMPT
                     .replace('$1', article.titre)
-                    .replace('$2', article.description)
+                    .replace('$2', article.description),
+                max_tokens: 256 * 4
             })
         }
     )
