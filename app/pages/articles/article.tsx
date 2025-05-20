@@ -39,7 +39,7 @@ export default () => {
 
         <div
           className="mb-4 article"
-          dangerouslySetInnerHTML={{ __html: article.contenu }}
+          dangerouslySetInnerHTML={{ __html: article.contenu! }}
         ></div>
 
         <p className="text-sm flex gap-2 text-black">
