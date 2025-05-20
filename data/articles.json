@@ -5,8 +5,8 @@
         "description": "Apprenez à mieux gérer vos dépenses en tant qu'étudiant grâce à des conseils simples et des outils accessibles à tous.",
         "contenu": "<h1>Comment gérer son budget étudiant efficacement</h1><p>Entre le loyer, les courses, les transports et les sorties, le budget étudiant peut rapidement devenir un casse-tête. Pourtant, quelques réflexes simples peuvent faire toute la différence.</p><ul><li>Établir un budget mensuel réaliste</li><li>Utiliser des applications de gestion financière</li><li>Profiter des aides et réductions étudiantes</li></ul><p>Avec un peu de rigueur, il est possible de vivre correctement sans stress financier.</p>",
         "reaction": {
-            "likes": 19,
-            "dislikes": 0
+            "likes": 20,
+            "dislikes": 1
         },
         "date": 1744455312862,
         "image": "http://localhost:5173/images/a.gif"
@@ -17,7 +17,7 @@
         "description": "Même avec de petits revenus, il est possible de commencer à épargner tôt. Voici comment s’y prendre pas à pas.",
         "contenu": "<h1>Épargner quand on est jeune : mission possible !</h1><p>Épargner dès le début de sa vie active permet de construire sereinement son avenir. Même 10€ par mois font une différence à long terme.</p><p>Commencez par définir un objectif : voyage, permis, projet pro… Ensuite, automatisez vos virements vers un livret ou une solution adaptée aux jeunes. Plus tôt vous commencez, plus les intérêts composés travaillent pour vous !</p>",
         "reaction": {
-            "likes": 16,
+            "likes": 17,
             "dislikes": 0
         },
         "date": 1744459784620
@@ -28,8 +28,8 @@
         "description": "tjs blablater blblbl",
         "contenu": "<h1>Épargner quand on est jeune : mission possible !</h1><p>Épargner dès le début de sa vie active permet de construire sereinement son avenir. Même 10€ par mois font une différence à long terme.</p><p>Commencez par définir un objectif : voyage, permis, projet pro… Ensuite, automatisez vos virements vers un livret ou une solution adaptée aux jeunes. Plus tôt vous commencez, plus les intérêts composés travaillent pour vous !</p>",
         "reaction": {
-            "likes": 0,
-            "dislikes": 0
+            "likes": 3,
+            "dislikes": 1
         },
         "date": 1722259784620,
         "image": "http://localhost:5173/images/arma.jpg"
@@ -40,7 +40,7 @@
         "description": "Minecraft Salut à tous c'est Fanta Salut à tous c'est Fanta",
         "contenu": "<h1>Épargner quand on est jeune : mission possible !</h1><p>Épargner dès le début de sa vie active permet de construire sereinement son avenir. Même 10€ par mois font une différence à long terme.</p><p>Commencez par définir un objectif : voyage, permis, projet pro… Ensuite, automatisez vos virements vers un livret ou une solution adaptée aux jeunes. Plus tôt vous commencez, plus les intérêts composés travaillent pour vous !</p>",
         "reaction": {
-            "likes": 19,
+            "likes": 20,
             "dislikes": 1
         },
         "date": 1722259784620
@@ -51,7 +51,7 @@
         "description": "Retour sur le lancement ambitieux de Star Citizen.",
         "contenu": "<h1>Le développement initial de Star Citizen</h1><p>Lancé en 2012 par Chris Roberts, Star Citizen a démarré comme un projet ambitieux de simulation spatiale, financé via Kickstarter. Le jeu promettait une liberté sans précédent dans un univers persistant.</p><p>Avec plus de 600 millions de dollars récoltés, le projet a pris de l’ampleur, multipliant les fonctionnalités et les attentes des fans. Malgré les retards, la communauté reste fidèle, espérant un jour voir cette vision devenir réalité.</p>",
         "reaction": {
-            "likes": 100,
+            "likes": 101,
             "dislikes": 2
         },
         "date": 1725200000000
@@ -62,7 +62,7 @@
         "description": "Qwik, le framework web ultra-rapide qui redéfinit le développement frontend.",
         "contenu": "<h1>Qwik : le framework qui change la donne</h1><p>Qwik mise sur le <strong>resumability</strong>, un concept qui permet de charger une application web presque instantanément, même avec du JavaScript complexe.</p><p>Contrairement à React ou Vue, Qwik n’a pas besoin d'hydrater l’intégralité du DOM côté client. Résultat : des performances optimales et une expérience utilisateur fluide, même sur mobile. Qwik est à la fois minimaliste, puissant et... presque magique.</p>",
         "reaction": {
-            "likes": 56,
+            "likes": 57,
             "dislikes": 5
         },
         "date": 1725300000000

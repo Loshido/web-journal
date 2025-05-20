@@ -79,9 +79,8 @@ export default function Articles() {
               <Lien
                 key={article.id}
                 to={`/articles/${article.id}`}
-                className="w-full "
+                className="w-full col-span-1 rounded-2xl h-80 overflow-hidden grid grid-rows-3 shadow-sm hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="col-span-1 rounded-2xl h-80 overflow-hidden grid grid-rows-3 shadow-sm hover:shadow-xl transition-shadow duration-300">
                   <div className="row-span-2 overflow-hidden">
                     <img
                       src={article.image || "/Bureau.jpeg"}
@@ -92,7 +91,7 @@ export default function Articles() {
                   <div className="bg-gray-200 rounded-b-2xl text-xl flex items-center p-5">
                     {article.titre}
                   </div>
-                </div>
+                
               </Lien>
             ))}
           </div>
