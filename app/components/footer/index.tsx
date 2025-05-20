@@ -8,16 +8,20 @@ export default function Footer() {
             <div className="grid w-full col-span-2 row-span-1
             md:grid-cols-2 ">
                 <div className="grid grid-rows-3 p-5 pl-10">
-                    <div className="flex row-span-2 justify-center items-center">Ce site est un projet de webdev. L’idée de ce projet est d’allier toutes nos connaissances dans ce domaine pour faire une production originale</div>
+                    <p>
+                        Ce site est un projet de webdev. 
+                        L’idée de ce projet est d’allier toutes nos connaissances dans ce domaine 
+                        pour faire <strong>une production originale</strong>
+                    </p>
                     <div className="flex row-span-1 items-center font-semibold">Livio A, Maxime G et Tom R</div>
                 </div>
                 <div className="grid col-span-1 grid-cols-2">
                     <div className="flex flex-col p-3 gap-2">
                         <h1 className="font-semibold flex items-center text-4xl">Pages</h1>
                         <div className="flex flex-col pl-4">
-                            <Lien className="text-black" to="/">Accueil</Lien>
-                            <Lien className="text-black " to="/articles">Articles</Lien>
-                            <Lien className="text-black" to="/admin">Administration</Lien>
+                            <Lien  to="/">Accueil</Lien>
+                            <Lien to="/articles">Articles</Lien>
+                            <Lien  to="/admin">Administration</Lien>
                         </div>
                     </div>
                     <div className="flex flex-col p-3 gap-2">
