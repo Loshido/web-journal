@@ -48,8 +48,7 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
                     </Lien>
                 </div>
             </div>
-            <div className="w-full h-screen p-5 flex items-center justify-center
-            md:h-100">
+            <div className="w-full h-auto p-5 flex items-center justify-center">
                 <div className="w-screen h-full rounded-2xl grid grid-cols-2 gap-3
                  md:w-6xl md:grid-cols-5">
                     <div className="bg-gray-200 col-span-2 rounded-2xl grid grid-rows-3
@@ -83,6 +82,8 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
                     </Lien>
                 </div>
             </div>
+        </section>
+        <section>
             <div className="bg-gray-100 mt-10 mb-10 w-screen h-screen flex flex-col">
                 <div className="w-full h-full grid grid-cols-1 grid-rows-5
                 md:grid-cols-11 md:grid-rows-6">
