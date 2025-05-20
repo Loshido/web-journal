@@ -83,8 +83,6 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
                     </Lien>
                 </div>
             </div>
-        </section>
-        <section>
             <div className="bg-gray-100 mt-10 mb-10 w-screen h-screen flex flex-col">
                 <div className="w-full h-full grid grid-cols-1 grid-rows-5
                 md:grid-cols-11 md:grid-rows-6">
