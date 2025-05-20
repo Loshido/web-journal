@@ -19,9 +19,9 @@ export default function Footer() {
                     <div className="flex flex-col p-3 gap-2">
                         <h1 className="font-semibold flex items-center text-4xl">Pages</h1>
                         <div className="flex flex-col pl-4">
-                            <Lien  to="/">Accueil</Lien>
-                            <Lien to="/articles">Articles</Lien>
-                            <Lien  to="/admin">Administration</Lien>
+                            <Lien className="text-black" to="/">Accueil</Lien>
+                            <Lien className="text-black" to="/articles">Articles</Lien>
+                            <Lien className="text-black" to="/admin">Administration</Lien>
                         </div>
                     </div>
                     <div className="flex flex-col p-3 gap-2">
