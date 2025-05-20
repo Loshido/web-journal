@@ -19,29 +19,29 @@ export default function Footer() {
                     <div className="flex flex-col p-3 gap-2">
                         <h1 className="font-semibold flex items-center text-4xl">Pages</h1>
                         <div className="flex flex-col pl-4">
-                            <Lien className="text-black" to="/">Accueil</Lien>
-                            <Lien className="text-black" to="/articles">Articles</Lien>
-                            <Lien className="text-black" to="/admin">Administration</Lien>
+                            <Lien to="/">Accueil</Lien>
+                            <Lien to="/articles">Articles</Lien>
+                            <Lien to="/admin">Administration</Lien>
                         </div>
                     </div>
                     <div className="flex flex-col p-3 gap-2">
                         <h1 className="font-semibold flex items-center text-4xl">Liens utiles</h1>
                         <div className="flex flex-col pl-4">
-                            <Lien className="text-black" to="https://github.com/Loshido/web-journal">
+                            <Lien to="https://github.com/Loshido/web-journal">
                                 Projet
                             </Lien>
                             <div className="flex flex-row items-center gap-1">
-                                <Lien className="text-black " to="https://react.dev">
+                                <Lien to="https://react.dev">
                                     React
                                 </Lien>
                                 <p className="font-black">
                                     &
                                 </p>
-                                <Lien className="text-black " to="https://reactrouter.com">
+                                <Lien to="https://reactrouter.com">
                                     Reactrouter
                                 </Lien>
                             </div>
-                            <Lien className="text-black" to="https://tailwindcss.com">
+                            <Lien to="https://tailwindcss.com">
                                 Tailwindcss
                             </Lien>
                         </div>
