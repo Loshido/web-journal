@@ -75,7 +75,7 @@ export default ({ loaderData }: Route.ComponentProps) => {
                 </h3>
                 <textarea defaultValue={article.contenu} 
                     className="resize-none w-full h-full outline-none overflow-y-scroll 
-                        p-4 border-t border-black/10"
+                        p-4 border-t border-black/10 min-h-96"
                     onInput={(e) => {
                         const target = e.target as HTMLTextAreaElement;
                         setArticle(prevArticle => ({

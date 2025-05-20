@@ -30,7 +30,7 @@ interface Thumbnail {
 export default function(props: Thumbnail) {
     return <div className="relative h-48 min-w-64 border-black/25 p-4
         flex flex-col gap-2 rounded-sm">
-        <p className="font-semibold">
+        <p className="font-semibold mix-blend-difference">
             { props.nom }
         </p>
         <div className="flex flex-row gap-2 text-xs">

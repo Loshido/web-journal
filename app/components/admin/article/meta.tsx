@@ -6,7 +6,7 @@ type Comp = {
 }
 
 export const Item = ({ children }: Comp) => <div 
-    className={`grid grid-cols-3 border-t border-black/10 text-lg`}>
+    className={`grid grid-cols-4 border-t border-black/10 text-lg`}>
     { children }
 </div>
 
@@ -27,7 +27,7 @@ export default ({ article, update }: MetaProps) => <>
         <input type="text" onInput={(event) => {
             const target = event.target as HTMLInputElement
             update({ id: target.value });
-        }} className="px-3 py-2 outline-none col-span-2" defaultValue={article.id} />
+        }} className="px-3 py-2 outline-none col-span-3" defaultValue={article.id} />
     </Item>
     <Item>
         <Key>
@@ -36,7 +36,7 @@ export default ({ article, update }: MetaProps) => <>
         <input type="text" onInput={(event) => {
                 const target = event.target as HTMLInputElement
                 update({ titre: target.value });
-            }} className="px-3 py-2 outline-none col-span-2" defaultValue={article.titre} />
+            }} className="px-3 py-2 outline-none col-span-3" defaultValue={article.titre} />
     </Item>
     <Item>
         <Key>
@@ -45,7 +45,7 @@ export default ({ article, update }: MetaProps) => <>
         <input type="text" onInput={(event) => {
                 const target = event.target as HTMLInputElement
                 update({ description: target.value });
-            }} className="px-3 py-2 outline-none col-span-2" defaultValue={article.description} />
+            }} className="px-3 py-2 outline-none col-span-3" defaultValue={article.description} />
     </Item>
     <Item>
         <Key>
@@ -54,6 +54,6 @@ export default ({ article, update }: MetaProps) => <>
         <input type="text" onInput={(event) => {
                 const target = event.target as HTMLInputElement
                 update({ image: target.value });
-            }} className="px-3 py-2 outline-none col-span-2" defaultValue={article.image} />
+            }} className="px-3 py-2 outline-none col-span-3" defaultValue={article.image} />
     </Item>
 </>
