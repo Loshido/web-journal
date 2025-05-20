@@ -19,7 +19,7 @@ export const Partie = ({ className, id, to, children }: Props) => <Link id={id} 
 
 import './accueil.css'
 export default function Page() {
-    return <section className="p-4 md:p-8 xl:p-12 flex flex-col gap-3 xl:gap-6 md:grid grid-cols-6 grid-rows-6 h-svh w-full">
+    return <section className="p-3 md:p-6 flex flex-col gap-3 xl:gap-6 md:grid grid-cols-6 grid-rows-6 h-svh w-full">
         <div className="col-span-3 flex flex-col justify-center">
             <h1 className="text-3xl xl:text-5xl font-black xl:leading-20">Page d'administration</h1>
             <p className="text-sm xl:text-base italic font-light">
@@ -51,6 +51,9 @@ export default function Page() {
             <img src="/assets/fabrique.png" alt="Fabrique" 
                 className="w-full h-full absolute top-0 left-0 -z-10 grayscale-100
                 group-hover:grayscale-0 object-cover"/>
+            <div className="bg-gradient-to-tr from-sky-700/30 via-black/5 to-sky-700/50
+                opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                w-full h-full absolute top-0 left-0 -z-20"/>
         </Partie>
     </section>
 }

@@ -3,7 +3,7 @@ import { Form, useSubmit } from "react-router";
 import Logo from "~/components/icons/logo";
 
 export const Article = ({ children }: { children: React.ReactNode} ) => <>
-    <div className="p-2 rounded-t-sm bg-black/5 text-black/50 w-full text-xm flex flex-row items-center">
+    <div className="p-2 rounded-t-sm bg-black/5 text-black/50 w-full text-xs sm:text-sm md:text-lg flex flex-row items-center">
         <p>
             { location.origin }/articles/
         </p>
@@ -11,7 +11,7 @@ export const Article = ({ children }: { children: React.ReactNode} ) => <>
             placeholder="identifiant-de-l-article"
             pattern="^[a-z]+(-[a-z]+)*$"
             required
-            className="outline-none col-span-2" />
+            className="outline-none w-full" />
     </div>
     <article className="p-3 w-full h-fit bg-white/60 shadow-2xl
         flex flex-col justify-between relative rounded-b-sm">
@@ -24,7 +24,7 @@ export const Article = ({ children }: { children: React.ReactNode} ) => <>
                 required
                 className="outline-none text-xs lg:text-base h-24 resize-y max-h-32"/>
         </div>
-        <div className="flex flex-row flex-wrap gap-2 select-none">
+        <div className="flex flex-row flex-wrap gap-2 select-none text-xs md:text-sm">
             {
                 // les boutons
                 children
@@ -52,9 +52,9 @@ export default () => {
                 }}>
                 {
                     ouvert === 1 
-                    ? <Form method="POST" className="w-4/5 md:w-3/4 lg:w-2/3 h-fit">
+                    ? <Form method="POST" className="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 h-fit">
                         <Article>
-                            <button className="px-2 py-1 text-sm cursor-pointer outline-none
+                            <button className="px-2 py-1 cursor-pointer outline-none
                                 bg-blue-600 hover:bg-blue-500 transition-colors text-white rounded-sm" type="submit" onClick={async event => {
                                     event.preventDefault()
                                     const form = document.querySelector('form') as HTMLFormElement | null
@@ -65,7 +65,7 @@ export default () => {
                                 }}>
                                 Créer l'article
                             </button>
-                            <button className="px-2 py-1 text-sm cursor-pointer outline-none
+                            <button className="px-2 py-1 cursor-pointer outline-none
                                 bg-orange-600 hover:bg-orange-500 transition-colors text-white rounded-sm" type="submit"
                                 onClick={async event => {
                                     event.preventDefault()
@@ -85,7 +85,7 @@ export default () => {
                                 Générer l'article
                             </button>
                             <div onClick={() => setOuvert(0)}
-                                className="px-2 py-1 text-sm cursor-pointer
+                                className="px-2 py-1 cursor-pointer
                                 hover:bg-black/10 transition-colors text-black rounded-sm">
                                 Annuler
                             </div>
