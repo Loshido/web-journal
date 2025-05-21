@@ -1,7 +1,8 @@
-import data from "~/../data/articles.json";
-import { Route } from "./+types";
-import { useSubmit } from "react-router";
+
+import { useSubmit, useLoaderData } from "react-router";
 import { useEffect, useState } from "react";
+import { listArticles, updateArticle } from "~/lib/articles.ts"
+import { Route } from "./+types";
 
 import Lien from "~/components/Lien";
 import PouceUp from "~/components/icons/pouce1.tsx";
@@ -10,19 +11,15 @@ import Fleche from "~/components/icons/fleche.tsx";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
 
+
 import "~/components/articles/article.css";
 
 // Partie serveur---
 export async function action({ request, params }: Route.ActionArgs) {
-  const données = await request.json();
+  const donnees = await request.json();
   const idArticle = params.article;
   if (!idArticle) return;
 
-
-  // on choppe l'article courant
-  const { listArticles, updateArticle } = await import(
-    "~/../app/lib/articles.ts"
-  );
   const article = listArticles().find((a) => a.id === idArticle);
   if (!article) return;
 
@@ -30,7 +27,7 @@ export async function action({ request, params }: Route.ActionArgs) {
 
   let nouveau = { likes, dislikes };
 
-  switch (données.type) {
+  switch (donnees.type) {
     case "like":
       nouveau.likes += 1;
       break;
@@ -38,15 +35,15 @@ export async function action({ request, params }: Route.ActionArgs) {
       nouveau.dislikes += 1;
       break;
     case "cancel":
-      if (données.cancelType === "like") nouveau.likes -= 1;
-      if (données.cancelType === "dislike") nouveau.dislikes -= 1;
+      if (donnees.cancelType === "like") nouveau.likes -= 1;
+      if (donnees.cancelType === "dislike") nouveau.dislikes -= 1;
       break;
     case "switch":
-      if (données.from === "like" && données.to === "dislike") {
+      if (donnees.from === "like" && donnees.to === "dislike") {
         nouveau.likes -= 1;
         nouveau.dislikes += 1;
       }
-      if (données.from === "dislike" && données.to === "like") {
+      if (donnees.from === "dislike" && donnees.to === "like") {
         nouveau.dislikes -= 1;
         nouveau.likes += 1;
       }
@@ -57,18 +54,23 @@ export async function action({ request, params }: Route.ActionArgs) {
   return null;
 }
 
-export async function loader() {
-  return null;
+export async function loader({ params }: Route.LoaderArgs) {
+  const idArticle = params.article;
+  if (!idArticle) return null;
+  const articles = listArticles();
+  const article = articles.find((a) => a.id === idArticle);
+  return article ?? null;
 }
 
 
-
-
 //  Partie client ---
+
+//recupération des articles
 export default function Page({ params }: Route.ComponentProps) {
   const submit = useSubmit();
+  const article = useLoaderData() as Awaited<ReturnType<typeof loader>>;
+
   const idArticle = params.article;
-  const article = data.find((a) => a.id === idArticle);
 
   const [reactionUtilisateur, setReactionUtilisateur] = useState<
     "like" | "dislike" | null
@@ -77,7 +79,7 @@ export default function Page({ params }: Route.ComponentProps) {
     article?.reaction ?? { likes: 0, dislikes: 0 }
   );
 
-    // reaction depuis localStorage qu'on initialise
+  // reaction depuis localStorage qu'on initialise
   useEffect(() => {
     const saved = localStorage.getItem("reaction-" + idArticle);
     if (saved === "like" || saved === "dislike") {
@@ -87,43 +89,45 @@ export default function Page({ params }: Route.ComponentProps) {
 
 
 
-    //ici on puisse gerer les reactions
+  //ici on puisse gerer les reactions
   const gererReaction = async (type: "like" | "dislike") => {
     if (!idArticle) return;
 
-    const estLike = type === "like";
-    const champ = estLike ? "likes" : "dislikes";
-    const champOppose = estLike ? "dislikes" : "likes";
+   
 
     // réaction canceled si on reclique sur bouton
-if (reactionUtilisateur === type) {
-  setReactions((compteurs) => ({ ...compteurs, [champ]: compteurs[champ] - 1 }));
-  setReactionUtilisateur(null);
-  localStorage.removeItem("reaction-" + idArticle);
-  await submit({ type: "cancel", cancelType: type }, { method: "post", encType: "application/json" });
-  return;
-}
+    if (reactionUtilisateur === type) {
+    setReactions((r) => ({
+      ...r,
+      [type === "like" ? "likes" : "dislikes"]: r[type === "like" ? "likes" : "dislikes"] - 1,
+    }));
+    setReactionUtilisateur(null);
+    localStorage.removeItem("reaction-" + idArticle);
+    await submit({ type: "cancel", cancelType: type }, { method: "post", encType: "application/json" });
+    return;
+  }
 
-// réaction switch si on change de bouton
-if (reactionUtilisateur && reactionUtilisateur !== type) {
-  setReactions((compteurs) => ({
-    ...compteurs,
-    [champ]: compteurs[champ] + 1,
-    [champOppose]: compteurs[champOppose] - 1,
+    // réaction switch si on change de bouton
+  if (reactionUtilisateur) {
+    setReactions((r) => ({
+      ...r,
+      [type === "like" ? "likes" : "dislikes"]: r[type === "like" ? "likes" : "dislikes"] + 1,
+      [type === "like" ? "dislikes" : "likes"]: r[type === "like" ? "dislikes" : "likes"] - 1,
+    }));
+    setReactionUtilisateur(type);
+    localStorage.setItem("reaction-" + idArticle, type);
+    await submit({ type: "switch", from: reactionUtilisateur, to: type }, { method: "post", encType: "application/json" });
+    return;
+  }
+
+  setReactions((r) => ({
+    ...r,
+    [type === "like" ? "likes" : "dislikes"]: r[type === "like" ? "likes" : "dislikes"] + 1,
   }));
   setReactionUtilisateur(type);
   localStorage.setItem("reaction-" + idArticle, type);
-  await submit({ type: "switch", from: reactionUtilisateur, to: type }, { method: "post", encType: "application/json" });
-  return;
-}
-
-setReactions((compteurs) => ({ ...compteurs, [champ]: compteurs[champ] + 1 }));
-setReactionUtilisateur(type);
-localStorage.setItem("reaction-" + idArticle, type);
-await submit({ type }, { method: "post", encType: "application/json" });
-
-
-  };
+  await submit({ type }, { method: "post", encType: "application/json" });
+};
 
   if (!article) {
     return (
@@ -181,16 +185,14 @@ await submit({ type }, { method: "post", encType: "application/json" });
           <div className="flex items-center bg-gray-100 rounded-3xl p-1">
             <button
               onClick={() => gererReaction("like")}
-              className={`flex items-center px-3 py-2 gap-2 rounded-l-3xl hover:bg-gray-200 cursor-pointer ${
-                reactionUtilisateur === "like" ? "ring-2 ring-blue-600" : ""
-              }`}
+              className={`flex items-center px-3 py-2 gap-2 rounded-l-3xl hover:bg-gray-200 cursor-pointer ${reactionUtilisateur === "like" ? "ring-2 ring-blue-600" : ""
+                }`}
             >
               <PouceUp
-                className={`w-5 h-5 fill-blue-400 stroke-2 ${
-                  reactionUtilisateur === "like"
-                    ? "stroke-blue-600"
-                    : "stroke-gray-200"
-                }`}
+                className={`w-5 h-5 fill-blue-400 stroke-2 ${reactionUtilisateur === "like"
+                  ? "stroke-blue-600"
+                  : "stroke-gray-200"
+                  }`}
               />
               <p className="text-sm font-medium text-blue-400">
                 {reactions.likes}
@@ -201,16 +203,14 @@ await submit({ type }, { method: "post", encType: "application/json" });
 
             <button
               onClick={() => gererReaction("dislike")}
-              className={`flex items-center px-3 py-2 gap-2 rounded-r-3xl hover:bg-gray-200 cursor-pointer ${
-                reactionUtilisateur === "dislike" ? "ring-2 ring-red-600" : ""
-              }`}
+              className={`flex items-center px-3 py-2 gap-2 rounded-r-3xl hover:bg-gray-200 cursor-pointer ${reactionUtilisateur === "dislike" ? "ring-2 ring-red-600" : ""
+                }`}
             >
               <PouceDown
-                className={`w-5 h-5 fill-red-500 stroke-2    ${
-                  reactionUtilisateur === "dislike"
-                    ? "stroke-red-600"
-                    : "stroke-gray-200"
-                }`}
+                className={`w-5 h-5 fill-red-500 stroke-2    ${reactionUtilisateur === "dislike"
+                  ? "stroke-red-600"
+                  : "stroke-gray-200"
+                  }`}
               />
               <p className="text-sm font-medium text-red-500">
                 {reactions.dislikes}
