@@ -83,7 +83,7 @@ export default function Articles() {
               >
                   <div className="row-span-2 overflow-hidden">
                     <img
-                      src={article.image || "/Bureau.jpeg"}
+                      src={article.image || "~/../public/assets/Bureau.jpeg"}
                       alt="Aucune image"
                       className="rounded-t-2xl h-full w-full object-cover object-center transform hover:scale-105 transition-transform duration-300"
                     />
