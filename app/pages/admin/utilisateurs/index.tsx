@@ -6,7 +6,9 @@ import Users from "./Users"
 import { lister_sessions, supprimer_session } from "~/lib/auth/sessions"
 import { creer_utilisateur, lister_utilisateurs, modifier_utilisteur, supprimer_utilisateur } from "~/lib/auth/users"
 
+//* l'exaustivité des conditions permet de garder le "typesafety"
 export async function action({ request }: Route.ActionArgs) {
+    // Formatage des données de la requête
     const payload = await request.json() as object
     const formatted = 'type' in payload
     if(!formatted) return "Requête non-conforme"
@@ -49,7 +51,7 @@ export default ({ loaderData: { sessions, users } }: Route.ComponentProps) => {
                 }, { method: 'POST', encType: 'application/json' })} />
         </div>
         <div className="col-span-2 h-full w-full">
-            <Users users={users} 
+            <Users users={users}
                 nouveau={async () => {
                     const nom = prompt(`Entrez le nom du nouvel utilisateur.`)
                     const pass = prompt(`Entrez son mots de passe.`)

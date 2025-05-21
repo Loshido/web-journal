@@ -1,0 +1,10 @@
+#users div{
+    background-image: url(/assets/coffre.png);
+    background-repeat: repeat;
+    background-size: 40%;
+}
+
+#gallerie img,
+#fabrique img{
+    transition: -webkit-filter 500ms ease-in-out;
+}

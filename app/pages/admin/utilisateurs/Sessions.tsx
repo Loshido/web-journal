@@ -8,6 +8,7 @@ interface Props {
     supprimer: (token: string) => void
 }
 
+// Gestion des sessions en cours
 export default ({ sessions, supprimer }: Props) => {
     return <>
         <h1 className="text-3xl font-semibold">

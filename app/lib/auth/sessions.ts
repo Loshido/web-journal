@@ -39,7 +39,7 @@ const sessions = {
 
 // génère un token et le stocke
 export function generateToken(): string {
-    const token = Math.floor(Math.random() * 99999999).toString(36);
+    const token = Math.floor(Math.random() * 9E18).toString(36);
 
     // On stocke la session
     sessions.insert({

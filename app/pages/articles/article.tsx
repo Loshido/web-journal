@@ -159,7 +159,6 @@ await submit({ type }, { method: "post", encType: "application/json" });
               className="w-full h-80 object-cover object-center rounded-lg shadow-md mb-6"
             />
           )}
-
           <div
             className="mb-4 article"
             dangerouslySetInnerHTML={{ __html: article.contenu }}

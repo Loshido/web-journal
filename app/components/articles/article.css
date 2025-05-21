@@ -37,3 +37,15 @@
     margin: 24px auto;
     width: 75%;
 }
+
+.article ul {
+    list-style: square;
+    list-style-position: outside;
+    margin-left: 24px;
+}
+
+.article ol{
+    list-style: decimal;
+    list-style-position: outside;
+    margin-left: 24px;
+}

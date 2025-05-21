@@ -7,7 +7,12 @@ import Triangle from "~/components/icons/triangle";
 
 export async function loader(): Promise<ArticleData[]> {
     const articles = listArticles()
-    articles.sort((a, b) => b.reaction.likes - a.reaction.likes); //C'est ici que l'on trie la listArticles par le nombres de likes pour ensuite pouvoir les afficher
+
+    // C'est ici que l'on trie les articles par 
+    // le nombres de likes pour ensuite pouvoir les afficher
+    articles.sort((a, b) => b.reaction.likes - a.reaction.likes); 
+
+    // On récupère les 3 premiers articles
     return articles.slice(0, 3);
 }
 
@@ -15,9 +20,9 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
 
     return <div>
         <Header/>
-        <div className="mb-10 mt-10 flex flex-col items-center justify-center">
-            <div className="h-20 w-full flex items-center justify-center text-center font-semibold text-xl p-5 mb-10
-            md:text-3xl">Le site où chaque article éclaire, questionne et inspire.</div>
+        <section className="mb-10 mt-10 flex flex-col items-center justify-center">
+            <h1 className="h-20 w-full flex items-center justify-center text-center font-semibold text-xl p-5 mb-10
+            md:text-3xl">Le site où chaque article éclaire, questionne et inspire.</h1>
             <div className="bg-gray-100 rounded-2xl w-screen h-screen p-5 flex items-center justify-center
              md:w-8xl md:h-100">
                 <div className="w-screen h-full rounded-2xl grid grid-cols-1 gap-3 grid-rows-2
@@ -25,10 +30,10 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
                     <div className=" col-span-3 rounded-2xl row-span-1">
                         <div className="w-full h-full rounded-2xl p-10 gap-7 grid grid-rows-2
                         md:grid-rows-5 md:gap-1">
-                            <div className="text-xl row-span-2 flex justify-center items-center pl-1
+                            <h2 className="text-xl row-span-2 flex justify-center items-center pl-1
                             sm:pl-5 sm:text-2xl md:text-4xl">
                                 {articles[0].titre}
-                            </div>
+                            </h2>
                             <div className="row-span-2 p-2
                             sm:p-5 md:text-xl">
                                 {articles[0].description}
@@ -38,25 +43,18 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
                             </div>
                         </div>
                     </div>
-                    <Lien to={`/articles/` + articles[0].id} className="bg-amber-300 col-span-2 rounded-2xl grid grid-rows-4 row-span-1">
-                        <div className="row-span-4">
-                               <img
-                                 src={articles[0].image || "/Bureau.jpeg "}
-                                      alt="Aucune image"
-                                         className="rounded-2xl w-full h-full"
-                                 />
-                        </div>
+                    <Lien to={`/articles/` + articles[0].id} className="bg-gray-200 col-span-2 rounded-2xl grid row-span-1">
+                        <img className="rounded-2xl w-full h-full overflow-hidden object-cover" src={articles[0].image || "/assets/Bureau.jpeg"}/>
                     </Lien>
                 </div>
             </div>
-            <div className="w-full h-screen p-5 flex items-center justify-center
-            md:h-100">
+            <div className="w-full h-auto p-5 flex items-center justify-center">
                 <div className="w-screen h-full rounded-2xl grid grid-cols-2 gap-3
                  md:w-6xl md:grid-cols-5">
-                    <div className="bg-red-200 col-span-2 rounded-2xl grid grid-rows-3
+                    <div className="bg-gray-200 col-span-2 rounded-2xl grid grid-rows-3
                     md:col-span-2 md:grid-rows-4">
                         <Lien to={`/articles/` + articles[1].id} className="row-span-2 md:row-span-3">
-                            <img className="rounded-t-2xl w-full h-full" src="/Dev.jpeg?jsx"/>
+                            <img className="rounded-t-2xl w-full h-full overflow-hidden object-cover" src={articles[1].image || "/assets/Bureau.jpeg"}/>
                         </Lien>
                         <div className="bg-gray-200 rounded-b-2xl p-3 flex items-center justify-center row-span-1
                         sm:text-xl">
@@ -65,10 +63,10 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
                             </div>
                         </div>
                     </div>
-                    <div className="bg-red-200 col-span-2 rounded-2xl grid grid-rows-3
+                    <div className="bg-gray-200 col-span-2 rounded-2xl grid grid-rows-3
                     md:col-span-2 md:grid-rows-4">
                         <Lien to={`/articles/` + articles[2].id} className="row-span-2 md:row-span-3">
-                            <img className="rounded-t-2xl w-full h-full" src="/Bureau.jpeg?jsx"/>
+                            <img className="rounded-t-2xl w-full h-full overflow-hidden object-cover" src={articles[2].image || "/assets/Bureau.jpeg"}/>
                         </Lien>
                         <div className="bg-gray-200 rounded-b-2xl p-4 flex items-center justify-center row-span-1
                         sm:text-xl">
@@ -84,35 +82,31 @@ export default function Page({ loaderData: articles }: Route.ComponentProps) {
                     </Lien>
                 </div>
             </div>
-            {/* <div className="mb-10 mt-10 w-svw h-auto text-7xl">
-                <div id="ligne-scroll" className="flex flex-wrap break-all">DES ARTICLES LIMPIDES. C'EST VERT C'EST CLAIR. LES ARTICLES DU FUTUR. AHA</div>
-            </div> */}
+        </section>
+        <section>
             <div className="bg-gray-100 mt-10 mb-10 w-screen h-screen flex flex-col">
                 <div className="w-full h-full grid grid-cols-1 grid-rows-5
                 md:grid-cols-11 md:grid-rows-6">
-                    <div className="flex items-center justify-center col-span-1 row-span-1 text-lg
-                    md:font-semibold md:col-start-4 md:row-span-2 md:col-span-5 md:text-3xl">Comment sont faits nos articles ?</div>
+                    <h1 className="flex items-center justify-center col-span-1 row-span-1 text-lg
+                    md:font-semibold md:col-start-4 md:row-span-2 md:col-span-5 md:text-3xl">Comment sont faits nos articles ?</h1>
                     <div className="grid row-span-2
                      md:grid-cols-4 md:grid-rows-7 md:row-start-3 md:col-span-5 md:row-span-9 bg-gray-200">
                         <div className=" flex justify-center items-center p-5 text-center
                         md:col-span-4 md:row-start-1 md:row-span-4 md:text-2xl md:text-left md:pl-10">La grande majorité des articles que vous trouverez ici sont écrits par des personnes passionnées, qui mettent leur cœur et leur savoir dans chaque mot.</div>
-                        <div className="flex justify-center items-center text-center
-                        md:text-4xl md:col-span-2 md:row-start-5 md:row-span-2 md:col-start-1">HUMAIN</div>
+                        <h2 className="flex justify-center items-center text-center
+                        md:text-4xl md:col-span-2 md:row-start-5 md:row-span-2 md:col-start-1">HUMAIN</h2>
                     </div>
                     <Triangle className="w-fit h-full fill-gray-200 md:row-start-3 md:row-span-9 md:col-start-6 hidden md:flex" />
                     <div className="grid row-span-2
                      md:grid-cols-3 md:grid-rows-7 md:row-start-3 md:col-start-7 md:col-span-5 md:row-span-9">
-                        <div className=" flex justify-center items-center text-center flex-col
-                        md:col-span-2 md:row-start-2 md:col-start-2 md:text-4xl">CHATGPT</div>
+                        <h2 className=" flex justify-center items-center text-center flex-col
+                        md:col-span-2 md:row-start-2 md:col-start-2 md:text-4xl">CHATGPT</h2>
                         <div className=" flex justify-center items-center text-center p-5
                         md:col-span-3 md:row-start-3 md:row-span-5 md:text-2xl md:text-right md:p-10">Certains articles sont également rédigés avec l’aide de ChatGPT : il suffit que l'administrateur clique sur un bouton et donne une idée ou un axe, et l’article prend forme en quelques instants.</div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <Footer/>
-    {/* <div>
-        <img className="m-4" src="/routes.png"/>
-    </div> */}
     </div>
 }

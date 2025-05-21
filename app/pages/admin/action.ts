@@ -2,7 +2,8 @@ type CreateRequest = {
     type: 'create',
     id: string,
     titre: string,
-    description: string
+    description: string,
+    ia: boolean
 }
 type UpdateRequest = {
     type: 'update',
@@ -23,6 +24,8 @@ type Unknown = {
 
 type Requests = CreateRequest | UpdateRequest | DeleteRequest | Unknown
 
+// On cherche à extraire les données 
+// de la requête et les formatter
 export const traitementRequete = async (request: Request): Promise<Requests> => {
     const formData = await request.formData();
     const id = formData.get('identifiant')?.toString();
@@ -30,6 +33,7 @@ export const traitementRequete = async (request: Request): Promise<Requests> => 
     const description = formData.get('description')?.toString()
     const contenu = formData.get('contenu')?.toString()
     const image = formData.get('image')?.toString()
+    const ia = formData.get('ia')?.toString()
 
     if(formData.has('update')) return {
         type: 'update',
@@ -50,6 +54,7 @@ export const traitementRequete = async (request: Request): Promise<Requests> => 
         type: 'create',
         id,
         titre,
-        description
+        description,
+        ia: !!ia
     }
 }

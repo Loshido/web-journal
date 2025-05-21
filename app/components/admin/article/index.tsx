@@ -13,7 +13,7 @@ export default ({ article, supprimer }: Props) => <article
         <h3 className="font-semibold text-lg">
             { article.titre }
         </h3>
-        <p className="text-xs">
+        <p className="text-xs line-clamp-5">
             { article.description }
         </p>
     </div>
