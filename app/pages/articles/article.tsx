@@ -14,7 +14,7 @@ import Footer from "~/components/footer";
 
 import "~/components/articles/article.css";
 
-// Partie serveur---
+// Partie serveur (façon de parler) ---
 export async function action({ request, params }: Route.ActionArgs) {
   const donnees = await request.json();
   const idArticle = params.article;
@@ -107,7 +107,7 @@ export default function Page({ params }: Route.ComponentProps) {
     return;
   }
 
-    // réaction switch si on change de bouton
+    // réaction doit switch si on change de bouton
   if (reactionUtilisateur) {
     setReactions((r) => ({
       ...r,

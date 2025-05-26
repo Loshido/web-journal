@@ -1,9 +1,15 @@
 import { useState } from "react";
+import { useLoaderData } from "react-router";
 import Lien from "~/components/Lien";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
-import data from "~/../data/articles.json";
 import Filtres from "~/components/icons/filtre.tsx";
+import { listArticles } from "~/lib/articles.ts";
+
+
+export async function loader() {
+  return listArticles();
+}
 
 type OptionDeTri =
   | "A-Z"
@@ -13,22 +19,22 @@ type OptionDeTri =
   | "plus likes"
   | "moins likes";
 
+  
 const fonctionsTri: Record<OptionDeTri, (a: any, b: any) => number> = {
   "A-Z": (a, b) => a.titre.localeCompare(b.titre),
   "Z-A": (a, b) => b.titre.localeCompare(a.titre),
-
   recent: (a, b) => b.date - a.date,
   ancien: (a, b) => a.date - b.date,
-
   "plus likes": (a, b) => b.reaction.likes - a.reaction.likes,
   "moins likes": (a, b) => a.reaction.likes - b.reaction.likes,
 };
 
 export default function Articles() {
+  const articles = useLoaderData() as Awaited<ReturnType<typeof loader>>;
   const [search, setSearch] = useState("");
   const [sortBy, setSortBy] = useState<OptionDeTri>("A-Z");
 
-  const filteredArticles = data
+  const filteredArticles = articles
     .filter((article) =>
       article.titre.toLowerCase().includes(search.toLowerCase())
     )
@@ -81,17 +87,16 @@ export default function Articles() {
                 to={`/articles/${article.id}`}
                 className="w-full col-span-1 rounded-2xl h-80 overflow-hidden grid grid-rows-3 shadow-sm hover:shadow-xl transition-shadow duration-300"
               >
-                  <div className="row-span-2 overflow-hidden">
-                    <img
-                      src={article.image || "~/../public/assets/Bureau.jpeg"}
-                      alt="Aucune image"
-                      className="rounded-t-2xl h-full w-full object-cover object-center transform hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="bg-gray-200 rounded-b-2xl text-xl flex items-center p-5">
-                    {article.titre}
-                  </div>
-                
+                <div className="row-span-2 overflow-hidden">
+                  <img
+                    src={article.image || "~/../../assets/Bureau.jpeg"}
+                    alt="Aucune image"
+                    className="rounded-t-2xl h-full w-full object-cover object-center transform hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="bg-gray-200 rounded-b-2xl text-xl flex items-center p-5">
+                  {article.titre}
+                </div>
               </Lien>
             ))}
           </div>
