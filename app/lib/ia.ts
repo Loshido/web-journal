@@ -48,6 +48,7 @@ Si tu inclues une balise <style>, tous les sélecteurs CSS doivent commencer par
 - Structure ton contenu comme un vrai article web : avec des titres (<h1>, <h2>, etc.), paragraphes (<p>), listes, images (<img> avec des alt génériques) si pertinent, etc.
 - Le contenu doit être lisible et cohérent avec le titre et la description.
 - Aucune explication, seulement le HTML généré.
+- N'inclus pas le titre de l'article.
 
 Voici les données d’entrée :
 

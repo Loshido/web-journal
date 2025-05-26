@@ -19,7 +19,7 @@ type OptionDeTri =
   | "plus likes"
   | "moins likes";
 
-  
+
 const fonctionsTri: Record<OptionDeTri, (a: any, b: any) => number> = {
   "A-Z": (a, b) => a.titre.localeCompare(b.titre),
   "Z-A": (a, b) => b.titre.localeCompare(a.titre),
@@ -87,6 +87,7 @@ export default function Articles() {
                 to={`/articles/${article.id}`}
                 className="w-full col-span-1 rounded-2xl h-80 overflow-hidden grid grid-rows-3 shadow-sm hover:shadow-xl transition-shadow duration-300"
               >
+
                 <div className="row-span-2 overflow-hidden">
                   <img
                     src={article.image || "~/../../assets/Bureau.jpeg"}
