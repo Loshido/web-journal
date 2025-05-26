@@ -150,7 +150,7 @@ export default function Page({ params }: Route.ComponentProps) {
           </h1>
 
           <div className="flex flex-col sm:flex-row sm:justify-between text-lg text-gray-600 mb-6">
-            <p>{article.description}</p>
+            <p className="line-clamp-3 max-w-5/6">{article.description}</p>
             <p className="text-sm mt-2 sm:mt-0">
               {new Date(article.date).toLocaleDateString()}
             </p>

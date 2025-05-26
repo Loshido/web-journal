@@ -27,21 +27,21 @@ export default function Footer() {
                     <div className="flex flex-col p-3 gap-2">
                         <h1 className="font-semibold flex items-center text-4xl">Liens utiles</h1>
                         <div className="flex flex-col pl-4">
-                            <Lien to="https://github.com/Loshido/web-journal">
+                            <Lien target="_blank" to="https://github.com/Loshido/web-journal">
                                 Projet
                             </Lien>
                             <div className="flex flex-row items-center gap-1">
-                                <Lien to="https://react.dev">
+                                <Lien target="_blank" to="https://react.dev">
                                     React
                                 </Lien>
                                 <p className="font-black">
                                     &
                                 </p>
-                                <Lien to="https://reactrouter.com">
+                                <Lien target="_blank" to="https://reactrouter.com">
                                     Reactrouter
                                 </Lien>
                             </div>
-                            <Lien to="https://tailwindcss.com">
+                            <Lien target="_blank" to="https://tailwindcss.com">
                                 Tailwindcss
                             </Lien>
                         </div>
