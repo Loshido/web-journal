@@ -45,7 +45,7 @@
             "dislikes": 2
         },
         "date": 1725200000000,
-        "image": "http://localhost:5173/images/star-citizen-pc.jpg"
+        "image": "http://localhost:5173/images/star-citizen.png"
     },
     {
         "id": "best-qwik-coffee",
@@ -68,7 +68,6 @@
             "likes": 36,
             "dislikes": 5
         },
-
         "date": 1725300000000,
         "image": "http://localhost:5173/images/nutrition.jpeg"
     },

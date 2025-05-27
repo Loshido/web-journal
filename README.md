@@ -27,6 +27,14 @@
 
 `--host` permet d'accéder au site depuis l'extérieur / wifiisen (écoute sur toutes les interfaces).
 
+## Mise en place du projet
+
+L'un des points qui différencie notre projet des autres et que l'on utilise l'IA pour générer nos articles. (Un vrai moteur des fausses informations).
+
+Pour procéder vous devez inclure dans le fichier `.env` les clés permettant d'utiliser le model via l'API de Cloudflare. (Normalement elles sont dans l'archive envoyée)
+
+Enfin il faut installer les dépendances `bun install` ou `npm install`.
+
 ### Connexion
 - Identifiant : `guest`
 - Mots de pase : `guest`
