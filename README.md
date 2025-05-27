@@ -2,10 +2,9 @@
 
 ## Structure technique
 
-- Framework Javascript -> [React](https://react.dev)
-- (avec [React router](https://reactrouter.com/home))
-
-- Framework Frontend (CSS) -> [Tailwindcss](https://tailwindcss.com)
+- [React](https://react.dev)
+- [React router](https://reactrouter.com/home)
+- [Tailwindcss](https://tailwindcss.com) (Framework css)
 
 *`~/` corresponds à `./app/` depuis n'importe où à l'intérieur de `app`.
 
