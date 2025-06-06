@@ -50,7 +50,7 @@ export default function Footer() {
             </div>
             <h1 className="flex w-full h-full text-8xl
              md:justify-start md:items-end md:row-span-1 md:row-start-2 col-span-2 
-             sm:text-9xl pb-0 xl:text-[230px] xl:leading-[67%]">
+             sm:text-9xl pb-0 xl:text-[230px] xl:leading-[67%]" style={{lineHeight: 0.65,overflow: "hidden"}}>
                 LE BLOG
             </h1>   
         </div>
